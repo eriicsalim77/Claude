@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eric Salim Marlie — Performance Marketing & Analytics Professional based in New York City." />
+  <title>Eric Salim Marlie</title>
+  <style>
+/* =========================================
+   VARIABLES
+   ========================================= */
+:root {
+  --bg:          #000000;
+  --bg-alt:      #080808;
+  --surface:     #111111;
+  --surface-2:   #1a1a1a;
+  --border:      rgba(255,255,255,0.07);
+  --border-hi:   rgba(41,151,255,0.25);
+  --text:        #f5f5f7;
+  --text-2:      #86868b;
+  --text-3:      #48484a;
+  --accent:      #2997ff;
+  --accent-2:    #bf5af2;
+  --green:       #30d158;
+  --font:        -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --radius:      20px;
+  --radius-sm:   12px;
+  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; }
+strong { color: var(--text); font-weight: 600; }
+
+/* =========================================
+   NAV
+   ========================================= */
+#nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 200;
+  padding: 0 28px;
+  transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease), border-color 0.4s;
+  border-bottom: 1px solid transparent;
+}
+
+#nav.scrolled {
+  background: rgba(0,0,0,0.78);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border-color: var(--border);
+}
+
+.nav-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  color: var(--text);
+  transition: opacity 0.2s;
+}
+
+.nav-logo:hover { opacity: 0.7; }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-2);
+  letter-spacing: 0;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease), opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 54px;
+  inset: 54px 0 auto 0;
+  z-index: 199;
+  background: rgba(8,8,8,0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  flex-direction: column;
+  padding: 12px 28px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover { color: var(--accent); }
+
+/* =========================================
+   HERO
+   ========================================= */
+#hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 28px 100px;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+  animation: float 10s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 700px; height: 700px;
+  top: -250px; left: -150px;
+  background: radial-gradient(circle, rgba(41,151,255,0.22) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 500px; height: 500px;
+  top: 30%; right: -150px;
+  background: radial-gradient(circle, rgba(191,90,242,0.18) 0%, transparent 70%);
+  animation-delay: -4s;
+}
+
+.orb-3 {
+  width: 400px; height: 400px;
+  bottom: 5%; left: 25%;
+  background: radial-gradient(circle, rgba(41,151,255,0.12) 0%, transparent 70%);
+  animation-delay: -7s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-28px) scale(1.04); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(41,151,255,0.10);
+  border: 1px solid rgba(41,151,255,0.22);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  font-size: clamp(54px, 9vw, 104px);
+  font-weight: 700;
+  letter-spacing: -4px;
+  line-height: 1.0;
+  margin-bottom: 22px;
+}
+
+.name-first { color: var(--text); }
+
+.name-last {
+  background: linear-gradient(130deg, var(--accent) 20%, var(--accent-2) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--text-2);
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  height: 34px;
+  margin-bottom: 24px;
+}
+
+.caret {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--text-2);
+  max-width: 580px;
+  margin: 0 auto 52px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 48px;
+  max-width: 640px;
+  margin: 0 auto 52px;
+}
+
+.hs {
+  flex: 1;
+  text-align: center;
+}
+
+.hs-divider {
+  width: 1px;
+  height: 52px;
+  background: var(--border);
+}
+
+.hs-val {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.hs-unit {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hs-lbl {
+  display: block;
+  font-size: 11px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 6px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll Hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scroll-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.scroll-bar {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, var(--text-3), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.25; transform: scaleY(1); }
+  50%       { opacity: 0.9;  transform: scaleY(0.65); }
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1a85e0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(41,151,255,0.35);
+}
+
+.btn-ghost {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--accent);
+  padding: 14px 30px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid rgba(41,151,255,0.28);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.btn-ghost:hover {
+  background: rgba(41,151,255,0.08);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   SECTIONS SHARED
+   ========================================= */
+.section {
+  padding: 130px 28px;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-head {
+  margin-bottom: 72px;
+}
+
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 14px;
+}
+
+.section-head h2 {
+  font-size: clamp(38px, 5.5vw, 60px);
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+}
+
+/* =========================================
+   REVEAL
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity  0.75s var(--ease),
+    transform 0.75s var(--ease);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   ABOUT
+   ========================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text .lead {
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.acard {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px 22px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.acard:hover {
+  border-color: var(--border-hi);
+  transform: translateX(5px);
+}
+
+.acard-icon {
+  font-size: 18px;
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.acard h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+  letter-spacing: 0.01em;
+}
+
+.acard p {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.acard p + p { margin-top: 4px; }
+
+.acard em {
+  color: var(--text-3);
+  font-style: normal;
+  font-size: 12px;
+}
+
+/* =========================================
+   TIMELINE
+   ========================================= */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 28px;
+  padding-bottom: 64px;
+}
+
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.tl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(41,151,255,0.12);
+}
+
+.tl-line {
+  flex: 1;
+  width: 1px;
+  margin-top: 12px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+}
+
+.tl-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tl-body h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 5px;
+}
+
+.tl-company {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.tl-date {
+  font-size: 12px;
+  color: var(--text-3);
+  white-space: nowrap;
+  padding: 4px 13px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.tl-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.tl-list li {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.tl-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--text-3);
+  top: 0;
+}
+
+.tl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tl-tags span {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 13px;
+  background: rgba(41,151,255,0.07);
+  color: var(--accent);
+  border: 1px solid rgba(41,151,255,0.14);
+  border-radius: 100px;
+}
+
+/* =========================================
+   PROJECTS
+   ========================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.pcard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+}
+
+.pcard:hover {
+  border-color: var(--border-hi);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+}
+
+.pcard-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(41,151,255,0.05) 0%, rgba(191,90,242,0.04) 100%);
+  border-color: rgba(41,151,255,0.18);
+}
+
+.pcard-inner {
+  padding: 36px 40px;
+}
+
+.pcard-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.pcard-cat {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.pcard-org {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.pcard h3 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin-bottom: 14px;
+}
+
+.pcard p {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.pcard-impact {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 24px;
+}
+
+.pi-val {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  background: linear-gradient(130deg, var(--accent) 20%, var(--accent-2) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pi-lbl {
+  font-size: 11px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+.pcard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pcard-tags span {
+  font-size: 12px;
+  padding: 4px 13px;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+}
+
+/* =========================================
+   SKILLS
+   ========================================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  margin-bottom: 64px;
+}
+
+.skill-cat h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 18px;
+  letter-spacing: -0.2px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.s-tag {
+  font-size: 13px;
+  padding: 6px 15px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.s-tag:hover { border-color: var(--border-hi); color: var(--text); }
+
+.s-tag.s-hi {
+  background: rgba(41,151,255,0.07);
+  color: var(--accent);
+  border-color: rgba(41,151,255,0.18);
+}
+
+.certs {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 52px;
+  border-top: 1px solid var(--border);
+}
+
+.cert {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.cert-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(48,209,88,0.10);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cert p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.cert span {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* =========================================
+   CONTACT
+   ========================================= */
+.contact-section { text-align: center; }
+
+.contact-inner {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.contact-inner h2 {
+  font-size: clamp(38px, 5.5vw, 60px);
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  line-height: 1.05;
+  margin: 14px 0 22px;
+}
+
+.contact-inner > p {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.75;
+  margin-bottom: 52px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.clink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+}
+
+.clink:hover {
+  border-color: var(--border-hi);
+  background: rgba(41,151,255,0.04);
+  transform: translateX(5px);
+}
+
+.clink-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(41,151,255,0.10);
+  color: var(--accent);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  padding: 36px 28px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 960px) {
+  .about-grid { grid-template-columns: 1fr; gap: 52px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .pcard-featured { grid-column: 1; }
+  .skills-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .section { padding: 90px 20px; }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 28px;
+    padding: 28px 24px;
+  }
+
+  .hs-divider { width: 64px; height: 1px; }
+
+  .hero-cta { flex-direction: column; align-items: center; }
+
+  .tl-item { grid-template-columns: 16px 1fr; gap: 18px; }
+  .tl-head { flex-direction: column; gap: 10px; }
+
+  .certs { flex-direction: column; gap: 22px; }
+
+  .footer-inner { flex-direction: column; gap: 6px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-name { letter-spacing: -2.5px; }
+  .pcard-inner { padding: 26px 22px; }
+  .pcard-impact { gap: 24px; }
+  .pi-val { font-size: 28px; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Eric Marlie</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">OPT Authorized &nbsp;·&nbsp; Available July 2026</div>
+      <h1 class="hero-name">
+        <span class="name-first">Eric</span>
+        <span class="name-last">Salim&nbsp;Marlie</span>
+      </h1>
+      <p class="hero-role"><span class="typed"></span><span class="caret">|</span></p>
+      <p class="hero-sub">
+        Performance marketing and analytics professional. Built attribution systems that moved the needle at Fox&nbsp;Corporation and Leaf&nbsp;Home. New York&nbsp;City.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hs">
+          <span class="hs-val" data-target="1.7" data-float="true">0</span><span class="hs-unit">M+</span>
+          <span class="hs-lbl">Monthly Media Budget</span>
+        </div>
+        <div class="hs-divider"></div>
+        <div class="hs">
+          <span class="hs-val" data-target="37">0</span><span class="hs-unit">%</span>
+          <span class="hs-lbl">ROAS Improvement YoY</span>
+        </div>
+        <div class="hs-divider"></div>
+        <div class="hs">
+          <span class="hs-val" data-target="4">0</span><span class="hs-unit">+</span>
+          <span class="hs-lbl">Years Building Products</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">About</span>
+        <h2>From Jakarta to Manhattan</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">I'm a marketing analytics professional finishing my BBA at Baruch College's Zicklin School of Business — with a track record of turning complex data into growth that actually shows up in the numbers.</p>
+          <p>I started by founding a basketball e-commerce brand in Indonesia at&nbsp;16, scaling it to $6,500/month in revenue through influencer marketing and performance optimization. That early hustle wired me to think about growth from first principles.</p>
+          <p>At Leaf Home, I co-managed $1.7M+ in monthly paid media spend across Meta, TikTok, and Nextdoor. I built GeoLink — a ZIP/DMA-level attribution system that connected media investment to CRM revenue and improved ROAS by&nbsp;37%&nbsp;year-over-year.</p>
+          <p>At Fox Corporation, I work on digital engagement strategy for OutKick, partnering with BI, product, and editorial teams to analyze super-user behavior and drive retention initiatives presented to&nbsp;senior leadership.</p>
+          <p>I'm drawn to roles where data, product thinking, and marketing strategy intersect — where I can own a problem end-to-end and ship something that actually moves the needle.</p>
+        </div>
+        <div class="about-cards reveal">
+          <div class="acard">
+            <div class="acard-icon">🎓</div>
+            <div>
+              <h4>Education</h4>
+              <p>Baruch College — BBA Marketing Analytics<br/><em>Expected May 2026</em></p>
+              <p>BMCC — AAS Digital Marketing<br/><em>GPA 3.94 · May 2024</em></p>
+            </div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Queens, New York City<br/><em>OPT Work Authorization</em></p>
+            </div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">🎯</div>
+            <div>
+              <h4>Target Roles</h4>
+              <p>Marketing Analyst · Growth Associate · Data&nbsp;Analyst<br/><em>Available July 1, 2026</em></p>
+            </div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">🏆</div>
+            <div>
+              <h4>Recognition</h4>
+              <p>Blackstone Launchpad $1,000 Winner<br/><em>CUNY Clash Finalist · Academic Excellence Award</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-head">
+              <div>
+                <h3>Digital Engagement Intern</h3>
+                <p class="tl-company">Fox Corporation &nbsp;·&nbsp; Manhattan, NY</p>
+              </div>
+              <span class="tl-date">Jan 2026 – Present</span>
+            </div>
+            <ul class="tl-list">
+              <li>Partner with editorial, product, and BI teams to analyze user retention trends and identify drivers of "super user" decline</li>
+              <li>Contributed to a loyalty initiative presented to senior leadership — including two SVPs — in a full boardroom pitch</li>
+              <li>Built and maintain a CRM performance dashboard improving visibility into user behavior and enabling faster campaign decisions</li>
+              <li>Translate behavioral data into insights supporting email, paid social, and OOH campaigns under OutKick</li>
+              <li>Used Replit and Claude Code to prototype and demo an AI-assisted MVP during the final leadership presentation</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Retention Analytics</span>
+              <span>CRM Dashboard</span>
+              <span>Cross-functional</span>
+              <span>AI/LLM Tools</span>
+              <span>Stakeholder Management</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-head">
+              <div>
+                <h3>Media Buying Intern</h3>
+                <p class="tl-company">Leaf Home &nbsp;·&nbsp; Manhattan, NY</p>
+              </div>
+              <span class="tl-date">May 2024 – Jan 2026</span>
+            </div>
+            <ul class="tl-list">
+              <li>Co-managed $1.7M+ monthly paid media budget across Meta, TikTok, and Nextdoor through structured testing and incrementality analysis</li>
+              <li>Built <strong>GeoLink</strong> — a ZIP/DMA-level attribution dashboard connecting media spend to CRM revenue, improving ROAS&nbsp;37%&nbsp;YoY</li>
+              <li>Led monthly creative performance reporting workflow across Media and Creative teams, translating data into testing strategies</li>
+              <li>Drove budget allocation decisions through funnel-level insights and geo-level performance analysis</li>
+            </ul>
+            <div class="tl-tags">
+              <span>$1.7M Media Budget</span>
+              <span>Meta · TikTok</span>
+              <span>Attribution Modeling</span>
+              <span>+37% ROAS</span>
+              <span>Incrementality Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-head">
+              <div>
+                <h3>Marketing Research Teaching Assistant</h3>
+                <p class="tl-company">CUNY BMCC &nbsp;·&nbsp; Manhattan, NY</p>
+              </div>
+              <span class="tl-date">Aug 2023 – May 2024</span>
+            </div>
+            <ul class="tl-list">
+              <li>Guided 25+ students in survey design, statistical analysis, and data interpretation using Qualtrics and Excel</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Qualtrics</span>
+              <span>Statistical Analysis</span>
+              <span>Mentorship</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-body">
+            <div class="tl-head">
+              <div>
+                <h3>Founder &amp; CEO</h3>
+                <p class="tl-company">BBALLSTORE.ID &nbsp;·&nbsp; Jakarta, Indonesia</p>
+              </div>
+              <span class="tl-date">Dec 2019 – Aug 2022</span>
+            </div>
+            <ul class="tl-list">
+              <li>Founded and scaled a basketball-focused social commerce brand to Rp96M ($6,500) in monthly revenue from zero</li>
+              <li>Managed end-to-end operations across marketing, content, influencer partnerships, and marketplace strategy</li>
+              <li>Built user acquisition and conversion funnels across Indonesian digital channels</li>
+            </ul>
+            <div class="tl-tags">
+              <span>$6.5K/mo Revenue</span>
+              <span>Influencer Marketing</span>
+              <span>E-Commerce</span>
+              <span>Social Commerce</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">Projects</span>
+        <h2>Work That Moved the Needle</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="pcard pcard-featured reveal">
+          <div class="pcard-inner">
+            <div class="pcard-meta">
+              <span class="pcard-cat">Attribution System</span>
+              <span class="pcard-org">Leaf Home</span>
+            </div>
+            <h3>GeoLink Dashboard</h3>
+            <p>Built a proprietary ZIP/DMA-level attribution system connecting paid media spend across Meta, TikTok, and Nextdoor to CRM revenue data — enabling true ROAS visibility and geographic budget optimization at scale.</p>
+            <div class="pcard-impact">
+              <div class="pi">
+                <span class="pi-val">37%</span>
+                <span class="pi-lbl">ROAS Improvement YoY</span>
+              </div>
+              <div class="pi">
+                <span class="pi-val">$1.7M</span>
+                <span class="pi-lbl">Monthly Budget Informed</span>
+              </div>
+            </div>
+            <div class="pcard-tags">
+              <span>Excel</span><span>Attribution Modeling</span><span>CRM Integration</span><span>Geo Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal">
+          <div class="pcard-inner">
+            <div class="pcard-meta">
+              <span class="pcard-cat">Growth Strategy</span>
+              <span class="pcard-org">Fox Corporation / OutKick</span>
+            </div>
+            <h3>Super User Retention Initiative</h3>
+            <p>Led a research-backed growth project analyzing drivers of "super user" decline at OutKick. Partnered cross-functionally with BI, product, editorial, and finance teams — culminating in a boardroom presentation to 15+ colleagues including two SVPs.</p>
+            <div class="pcard-tags">
+              <span>User Retention</span><span>Cross-functional</span><span>SVP Presentation</span><span>Product Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal">
+          <div class="pcard-inner">
+            <div class="pcard-meta">
+              <span class="pcard-cat">Data Infrastructure</span>
+              <span class="pcard-org">Fox Corporation</span>
+            </div>
+            <h3>CRM Performance Dashboard</h3>
+            <p>Built and maintained an automated CRM dashboard providing real-time visibility into user behavior, enabling faster data-driven decision-making across email, paid social, and OOH campaign channels.</p>
+            <div class="pcard-tags">
+              <span>Braze</span><span>CRM Analytics</span><span>Dashboard</span><span>Behavioral Data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal">
+          <div class="pcard-inner">
+            <div class="pcard-meta">
+              <span class="pcard-cat">E-Commerce Brand</span>
+              <span class="pcard-org">Jakarta, Indonesia</span>
+            </div>
+            <h3>BBALLSTORE.ID</h3>
+            <p>Started at&nbsp;16. Built a basketball social commerce brand from zero to $6,500/month in revenue through influencer partnerships, marketplace SEO, and channel-level performance optimization.</p>
+            <div class="pcard-impact">
+              <div class="pi">
+                <span class="pi-val">$6.5K</span>
+                <span class="pi-lbl">Monthly Revenue at Peak</span>
+              </div>
+            </div>
+            <div class="pcard-tags">
+              <span>Influencer Marketing</span><span>Social Commerce</span><span>Growth</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">Skills</span>
+        <h2>Tools &amp; Capabilities</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-cat reveal">
+          <h4>Data &amp; Analytics</h4>
+          <div class="skill-tags">
+            <span class="s-tag s-hi">Excel (Advanced)</span>
+            <span class="s-tag s-hi">SQL</span>
+            <span class="s-tag s-hi">Python</span>
+            <span class="s-tag">R</span>
+            <span class="s-tag s-hi">Tableau</span>
+            <span class="s-tag s-hi">Google Analytics 4</span>
+            <span class="s-tag">Adobe Analytics</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Experimentation &amp; Measurement</h4>
+          <div class="skill-tags">
+            <span class="s-tag s-hi">A/B Testing</span>
+            <span class="s-tag s-hi">Incrementality Analysis</span>
+            <span class="s-tag s-hi">Attribution Modeling</span>
+            <span class="s-tag">Funnel Analysis</span>
+            <span class="s-tag">Performance Measurement</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>Paid Media &amp; Platforms</h4>
+          <div class="skill-tags">
+            <span class="s-tag s-hi">Meta Ads</span>
+            <span class="s-tag s-hi">TikTok Ads</span>
+            <span class="s-tag">Google Ads</span>
+            <span class="s-tag">Reddit Ads</span>
+            <span class="s-tag">Taboola</span>
+            <span class="s-tag">Nextdoor</span>
+            <span class="s-tag s-hi">Braze</span>
+            <span class="s-tag">Smartly.io</span>
+          </div>
+        </div>
+        <div class="skill-cat reveal">
+          <h4>AI &amp; Development</h4>
+          <div class="skill-tags">
+            <span class="s-tag s-hi">Claude Code</span>
+            <span class="s-tag s-hi">Replit</span>
+            <span class="s-tag">OpenAI Codex</span>
+            <span class="s-tag">AI-Assisted Development</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs reveal">
+        <div class="cert">
+          <span class="cert-check">✓</span>
+          <div>
+            <p>Google Analytics Certification</p>
+            <span>Google &nbsp;·&nbsp; Dec 2025</span>
+          </div>
+        </div>
+        <div class="cert">
+          <span class="cert-check">✓</span>
+          <div>
+            <p>Google Ads Measurement Certification</p>
+            <span>Google &nbsp;·&nbsp; Dec 2025</span>
+          </div>
+        </div>
+        <div class="cert">
+          <span class="cert-check">✓</span>
+          <div>
+            <p>AI-Powered Marketer</p>
+            <span>Semrush &nbsp;·&nbsp; May 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <span class="label">Contact</span>
+        <h2>Let's Talk</h2>
+        <p>I'm open to full-time analyst and associate roles starting July 2026 — especially at the intersection of marketing, data, and product. Reach out anytime.</p>
+        <div class="contact-links">
+          <a href="mailto:eriicsalim@yahoo.com" class="clink">
+            <span class="clink-icon">✉</span>
+            <span>eriicsalim@yahoo.com</span>
+          </a>
+          <a href="https://linkedin.com/in/ericsalimm" target="_blank" rel="noopener noreferrer" class="clink">
+            <span class="clink-icon">in</span>
+            <span>linkedin.com/in/ericsalimm</span>
+          </a>
+          <a href="tel:+19176842578" class="clink">
+            <span class="clink-icon">☎</span>
+            <span>(917) 684-2578</span>
+          </a>
+        </div>
+        <a href="mailto:eriicsalim@yahoo.com" class="btn-primary">Send a message →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>Eric Salim Marlie &nbsp;·&nbsp; New York City &nbsp;·&nbsp; 2026</p>
+        <p class="footer-right">Built with intention.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+/* =============================================
+   NAV — scroll glass effect + hamburger
+   ============================================= */
+const nav        = document.getElementById('nav');
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 16);
+}, { passive: true });
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+/* =============================================
+   SMOOTH ANCHOR SCROLL (offset for fixed nav)
+   ============================================= */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const id = anchor.getAttribute('href');
+    if (!id || id === '#') return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    const offset = target.getBoundingClientRect().top + window.scrollY - 54;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  });
+});
+
+/* =============================================
+   TYPEWRITER
+   ============================================= */
+const phrases = [
+  'Performance Marketing Analyst',
+  'Growth & Attribution Specialist',
+  'Media Buying & Data Strategy',
+  'Marketing Analytics Professional',
+];
+
+const typedEl  = document.querySelector('.typed');
+let pIdx       = 0;
+let cIdx       = 0;
+let deleting   = false;
+
+function type() {
+  const phrase = phrases[pIdx];
+  if (!deleting) {
+    typedEl.textContent = phrase.slice(0, ++cIdx);
+    if (cIdx === phrase.length) {
+      deleting = true;
+      setTimeout(type, 2200);
+      return;
+    }
+  } else {
+    typedEl.textContent = phrase.slice(0, --cIdx);
+    if (cIdx === 0) {
+      deleting = false;
+      pIdx = (pIdx + 1) % phrases.length;
+    }
+  }
+  setTimeout(type, deleting ? 38 : 62);
+}
+
+setTimeout(type, 700);
+
+/* =============================================
+   SCROLL REVEAL
+   ============================================= */
+const revealObs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 90);
+        revealObs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
+);
+
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* =============================================
+   COUNTER ANIMATION (hero stats)
+   ============================================= */
+function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+function animateCounter(el) {
+  const target    = parseFloat(el.dataset.target);
+  const isFloat   = el.dataset.float === 'true';
+  const duration  = 1800;
+  const startTime = performance.now();
+
+  function tick(now) {
+    const elapsed  = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const value    = target * easeOutCubic(progress);
+    el.textContent = isFloat ? value.toFixed(1) : Math.floor(value);
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+const counterObs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+document.querySelectorAll('.hs-val[data-target]').forEach(el => counterObs.observe(el));
+
+/* =============================================
+   SUBTLE PARALLAX on hero orbs (mouse)
+   ============================================= */
+const orbs = document.querySelectorAll('.orb');
+
+document.addEventListener('mousemove', e => {
+  const cx = window.innerWidth  / 2;
+  const cy = window.innerHeight / 2;
+  const dx = (e.clientX - cx) / cx;
+  const dy = (e.clientY - cy) / cy;
+
+  orbs.forEach((orb, i) => {
+    const factor = (i + 1) * 10;
+    orb.style.transform = `translate(${dx * factor}px, ${dy * factor}px)`;
+  });
+}, { passive: true });
+
+</script>
+</body>
+</html>
