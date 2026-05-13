@@ -649,19 +649,37 @@ strong { color: var(--text); font-weight: 600; }
   flex-shrink: 0;
 }
 
-/* Work photo in timeline */
+/* Work photos in timeline — duo layout */
+.tl-photo-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 22px;
+}
 .tl-photo-wrap {
-  margin-bottom: 20px;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  max-height: 220px;
   background: var(--light);
 }
 .tl-photo {
   width: 100%;
+  height: 220px;
   object-fit: cover;
-  max-height: 220px;
   display: block;
+  transition: transform 0.4s var(--ease);
+}
+.tl-photo-wrap:hover .tl-photo { transform: scale(1.03); }
+
+/* Fox sign — portrait shot, keep Eric + sign centered */
+.tl-photo-sign { object-position: center 30%; }
+/* Team / office photos — faces near top */
+.tl-photo-team { object-position: center 20%; }
+/* Product / wide shots — centered */
+.tl-photo-product { object-position: center center; }
+
+@media (max-width: 600px) {
+  .tl-photo-duo { grid-template-columns: 1fr; }
+  .tl-photo { height: 200px; }
 }
 
 .tl-list { list-style: none; margin-bottom: 18px; }
@@ -1016,6 +1034,8 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
   display: block;
 }
 .pcard-icon-cnk { background: rgba(249,115,22,0.08); }
+/* OutKick selfie — Eric is foreground left, keep him visible */
+.pcard-photo-wrap-outkick .pcard-photo { object-position: left 30%; }
 
 /* ════════════════════════════════════════
    AWARDS
