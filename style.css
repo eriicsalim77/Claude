@@ -289,18 +289,41 @@ strong { font-weight: 600; }
 .hero-sub strong { color: rgba(255,255,255,0.85); font-weight: 600; }
 
 .hero-loves {
-  display: flex; flex-wrap: wrap; gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   margin-bottom: 32px;
+  max-width: 460px;
 }
-.hero-loves span {
-  padding: 6px 16px;
-  border-radius: 100px;
-  border: 1.5px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.6);
-  font-size: 13px; font-weight: 500;
-  transition: border-color 0.2s, color 0.2s;
+.love-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
 }
-.hero-loves span:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); }
+.love-item:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+}
+.love-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.love-label {
+  display: block;
+  font-size: 13px; font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: -0.2px;
+  margin-bottom: 3px;
+}
+.love-micro {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,0.28);
+  line-height: 1.45;
+}
 
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
@@ -902,7 +925,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.2); }
   .hero-left { order: 2; }
   .hero-right { order: 1; }
   .hero-sub { margin: 0 auto 22px; }
-  .hero-loves { justify-content: center; }
+  .hero-loves { max-width: 100%; }
   .hero-cta { justify-content: center; }
   .hero-photo-wrap { width: 260px; height: 320px; }
   .hero-inner { padding-top: 100px; padding-bottom: 32px; }
