@@ -310,7 +310,7 @@ strong { font-weight: 600; }
   background: rgba(255,255,255,0.07);
   border-color: rgba(255,255,255,0.15);
 }
-.love-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.love-icon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 20px; height: 20px; color: rgba(255,255,255,0.55); margin-top: 1px; }
 .love-label {
   display: block;
   font-size: 13px; font-weight: 700;
@@ -462,7 +462,7 @@ strong { font-weight: 600; }
   font-size: 11px; font-weight: 600;
   color: var(--text-3);
 }
-.proj-icon { font-size: 28px; margin-bottom: 12px; }
+.proj-icon { display: flex; align-items: center; margin-bottom: 14px; color: var(--text-2); }
 .proj-card h3 {
   font-size: 20px; font-weight: 800;
   letter-spacing: -0.5px;
@@ -615,7 +615,7 @@ strong { font-weight: 600; }
   letter-spacing: -3px;
   pointer-events: none;
 }
-.pillar-icon { font-size: 32px; margin-bottom: 18px; }
+.pillar-icon { display: flex; align-items: center; margin-bottom: 18px; color: rgba(255,255,255,0.45); }
 .pillar-card h3 {
   font-size: 22px; font-weight: 800;
   letter-spacing: -0.5px;
@@ -822,7 +822,7 @@ strong { font-weight: 600; }
 .tl-logo-fox   { background: var(--fox-red); }
 .tl-logo-leaf  { background: var(--leaf-green); }
 .tl-logo-bmcc  { background: var(--dark-2); color: rgba(255,255,255,0.5); font-size: 11px; font-weight: 700; }
-.tl-logo-bball { background: var(--off-white); }
+.tl-logo-bball { background: #6366F1; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.5px; }
 .tl-body h3 { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
 .tl-co { font-size: 14px; color: var(--text-2); margin-top: 2px; }
 .tl-date {
