@@ -1173,3 +1173,189 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.25); }
 @media (max-width: 768px) {
   .pcard-photo-wrap { margin: -24px -22px 18px; height: 150px; }
 }
+
+/* ════════════════════════════════════════
+   HERO STAT — STATIC TEXT VARIANT
+   ════════════════════════════════════════ */
+.hstat-text {
+  font-size: 28px !important;
+  letter-spacing: -1px;
+}
+
+/* ════════════════════════════════════════
+   VALUE STRIP
+   ════════════════════════════════════════ */
+.value-strip {
+  background: var(--off-white);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 72px 32px;
+}
+.vs-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+.vs-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.vs-icon {
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin-bottom: 4px;
+}
+.vs-item h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+.vs-item p {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+@media (max-width: 900px) {
+  .vs-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/* ════════════════════════════════════════
+   GEOLINK DASHBOARD MOCKUP
+   ════════════════════════════════════════ */
+.geolink-mockup {
+  background: #0f1117;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.gm-topbar {
+  background: #1c1f26;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.gm-dot {
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.gm-red    { background: #FF5F57; }
+.gm-yellow { background: #FEBC2E; }
+.gm-green  { background: #28C840; }
+.gm-title {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  margin-left: 8px;
+  letter-spacing: 0.02em;
+  font-family: var(--font);
+}
+.gm-body {
+  display: flex;
+  min-height: 160px;
+}
+.gm-sidebar {
+  background: #161920;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 110px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.gm-filter {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: default;
+  font-family: var(--font);
+  transition: background 0.2s;
+}
+.gm-filter.active {
+  background: rgba(0,82,204,0.25);
+  color: #6BA4FF;
+  font-weight: 600;
+}
+.gm-main {
+  flex: 1;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gm-metric-row {
+  display: flex;
+  gap: 24px;
+}
+.gm-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.gm-m-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font);
+}
+.gm-m-val {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  font-family: var(--font);
+}
+.gm-green-val { color: #34D399 !important; }
+.gm-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gm-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gm-bar-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  width: 52px;
+  font-family: var(--font);
+  flex-shrink: 0;
+}
+.gm-bar-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.gm-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0052CC, #6BA4FF);
+  border-radius: 3px;
+}
+.gm-bar-num {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  width: 28px;
+  text-align: right;
+  font-family: var(--font);
+}
