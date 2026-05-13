@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eric Salim Marlie — Marketing Analytics & Growth Professional. Fox Corporation · Leaf Home · Baruch '26. Available July 2026." />
+  <meta name="description" content="Eric Salim Marlie — Marketing Analytics & Growth. Fox Corporation · Leaf Home · Baruch '26. Available July 2026." />
   <title>Eric Salim Marlie</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,12 +14,10 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Eric<span>.</span></a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#recognition">Recognition</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
+        <a href="#pillars">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#profile" class="nav-cta">Hire Eric</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -28,203 +26,211 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#recognition">Recognition</a>
-    <a href="#contact">Get in Touch →</a>
+    <a href="#pillars">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#profile">Hire Eric →</a>
   </div>
 
   <!-- ══════════════════════ HERO ══════════════════════ -->
   <section id="hero">
-    <div class="hero-left">
-      <div class="hero-eyebrow">
-        <span class="dot-pulse"></span>
-        Available July 2026 &nbsp;·&nbsp; OPT Authorized &nbsp;·&nbsp; New York City
-      </div>
-      <h1 class="hero-h1">
-        Hi, I'm <span class="grad-text">Eric</span>.<br/>
-        I connect data<br/>to <em>decisions that stick.</em>
-      </h1>
-      <p class="hero-sub">
-        Marketing analytics &amp; growth professional. At <strong>Fox Corporation</strong>, I analyze retention patterns and build dashboards that drive real decisions. At <strong>Leaf Home</strong>, I built GeoLink — a regional attribution system that connected paid media spend to CRM outcomes and improved ROAS&nbsp;37%&nbsp;YoY.
-      </p>
-      <div class="hero-cta">
-        <a href="#experience" class="btn-primary">See My Work</a>
-        <a href="#contact" class="btn-ghost">Let's Talk →</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hstat">
-          <span class="hstat-n" data-target="37">0</span><span class="hstat-u">%</span>
-          <span class="hstat-l">ROAS Lift YoY</span>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="dot-pulse"></span>
+          Available July 2026 &nbsp;·&nbsp; OPT Authorized &nbsp;·&nbsp; New York City
         </div>
-        <div class="hstat-sep"></div>
-        <div class="hstat">
-          <span class="hstat-n hstat-text">ZIP</span><span class="hstat-u">/DMA</span>
-          <span class="hstat-l">Attribution Depth</span>
-        </div>
-        <div class="hstat-sep"></div>
-        <div class="hstat">
-          <span class="hstat-n" data-target="15">0</span><span class="hstat-u">+</span>
-          <span class="hstat-l">Stakeholders Briefed</span>
-        </div>
-      </div>
-    </div>
 
-    <div class="hero-right">
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring"></div>
-        <div class="hero-photo-card">
-          <img
-            src="C26E6B82-E361-4254-832D-1CFE6DF19D8F.png"
-            alt="Eric Salim Marlie"
-            class="hero-img"
-            onerror="this.parentElement.classList.add('no-photo')"
-          />
-          <div class="hero-photo-placeholder">
-            <span>ESM</span>
+        <h1 class="hero-h1">
+          Hi, I'm <span class="grad-text">Eric</span>.<br/>
+          Fresh grad.<br/>
+          <em>Real results.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Marketing analytics with <strong>2 years building performance systems in-house</strong> — at Fox Corporation and Leaf Home. I care about four things:
+        </p>
+
+        <div class="hero-loves">
+          <span>Data</span>
+          <span>Tech</span>
+          <span>Storytelling</span>
+          <span>Business Growth</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">See My Work</a>
+          <a href="#profile" class="btn-ghost">Let's Talk →</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-ring"></div>
+          <div class="hero-photo-card">
+            <img
+              src="C26E6B82-E361-4254-832D-1CFE6DF19D8F.png"
+              alt="Eric Salim Marlie"
+              class="hero-img"
+              onerror="this.parentElement.classList.add('no-photo')"
+            />
+            <div class="hero-photo-placeholder"><span>ESM</span></div>
+          </div>
+          <div class="hero-badge-float hero-badge-fox">
+            <svg width="36" height="14" viewBox="0 0 72 28" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="22" font-family="Arial Black,Arial" font-weight="900" font-size="26" fill="#fff">FOX</text>
+            </svg>
+          </div>
+          <div class="hero-badge-float hero-badge-leaf">
+            <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+              <polygon points="22,4 36,12 22,20 8,12" fill="#4ADE80" opacity="0.55"/>
+              <polygon points="22,12 36,20 22,28 8,20" fill="#22C55E" opacity="0.8"/>
+              <polygon points="22,20 36,28 22,36 8,28" fill="#16A34A"/>
+            </svg>
           </div>
         </div>
-        <div class="hero-badge-float hero-badge-fox">
-          <!-- Fox logo inline -->
-          <svg width="36" height="14" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="22" font-family="Arial Black,Arial" font-weight="900" font-size="26" fill="#fff">FOX</text>
-          </svg>
-        </div>
-        <div class="hero-badge-float hero-badge-leaf">
-          <svg width="22" height="22" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="22,4 36,12 22,20 8,12" fill="#4ADE80" opacity="0.55"/>
-            <polygon points="22,12 36,20 22,28 8,20" fill="#22C55E" opacity="0.8"/>
-            <polygon points="22,20 36,28 22,36 8,28" fill="#16A34A"/>
-          </svg>
-        </div>
       </div>
     </div>
 
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="hero-scroll-bar"></div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ LOGOS ══════════════════════ -->
-  <div class="logos-bar">
-    <p class="logos-label">Experience at</p>
-    <div class="logos-row">
-
-      <!-- Fox Corporation -->
-      <div class="logo-item">
-        <div class="logo-fox">
-          <svg width="52" height="20" viewBox="0 0 72 28" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="22" font-family="Arial Black,Arial" font-weight="900" font-size="26" fill="#1a1a1a">FOX</text>
+    <div class="hero-logos-strip">
+      <span class="logos-label">Experience at</span>
+      <div class="hero-logos-row">
+        <div class="hl-item">
+          <svg width="40" height="15" viewBox="0 0 72 28" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="Arial Black,Arial" font-weight="900" font-size="26" fill="rgba(255,255,255,0.45)">FOX</text>
           </svg>
           <span>Corporation</span>
         </div>
-      </div>
-
-      <div class="logo-divider"></div>
-
-      <!-- Leaf Home -->
-      <div class="logo-item">
-        <div class="logo-leaf">
-          <svg width="24" height="24" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="22,2 38,11 22,20 6,11" fill="#4ADE80" opacity="0.5"/>
-            <polygon points="22,11 38,20 22,29 6,20" fill="#22C55E" opacity="0.75"/>
+        <span class="hl-sep">·</span>
+        <div class="hl-item">
+          <svg width="16" height="16" viewBox="0 0 44 44" fill="none">
+            <polygon points="22,2 38,11 22,20 6,11" fill="#4ADE80" opacity="0.6"/>
+            <polygon points="22,11 38,20 22,29 6,20" fill="#22C55E" opacity="0.8"/>
             <polygon points="22,20 38,29 22,38 6,29" fill="#16A34A"/>
           </svg>
           <span>Leaf Home</span>
         </div>
-      </div>
-
-      <div class="logo-divider"></div>
-
-      <!-- Baruch College -->
-      <div class="logo-item">
-        <div class="logo-baruch">
-          <div class="baruch-seal">B</div>
-          <span>Baruch<br/><em>Zicklin School</em></span>
-        </div>
-      </div>
-
-      <div class="logo-divider"></div>
-
-      <!-- BMCC -->
-      <div class="logo-item">
-        <div class="logo-bmcc">
-          <div class="bmcc-mark">CUNY</div>
-          <span>BMCC</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══════════════════════ VALUE STRIP ══════════════════════ -->
-  <div class="value-strip">
-    <div class="container">
-      <div class="vs-grid">
-        <div class="vs-item reveal">
-          <div class="vs-icon">📊</div>
-          <h4>I build the measurement layer</h4>
-          <p>When paid media and CRM data don't talk to each other, spend decisions are guesswork. I build the systems that close that gap — at the channel, ZIP, and DMA level.</p>
-        </div>
-        <div class="vs-item reveal">
-          <div class="vs-icon">🔬</div>
-          <h4>I run experiments that inform strategy</h4>
-          <p>A/B tests, incrementality analysis, cohort breakdowns — I design the test, read the result, and translate it into a recommendation that goes to decision-makers.</p>
-        </div>
-        <div class="vs-item reveal">
-          <div class="vs-icon">🎙</div>
-          <h4>I turn analysis into action</h4>
-          <p>Data that never leaves a spreadsheet doesn't move anything. I've presented to SVPs, briefed 15+ stakeholders, and built dashboards that get used — not just looked at once.</p>
-        </div>
+        <span class="hl-sep">·</span>
+        <div class="hl-item"><span>Baruch College</span></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══════════════════════ ABOUT ══════════════════════ -->
-  <section id="about" class="section">
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section id="projects" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="label">About</span>
-        <h2>From Jakarta to<br/>Manhattan.</h2>
+        <span class="label">Projects</span>
+        <h2>Work I'm proud of.</h2>
+        <p class="section-sub">Click any card to see the full story.</p>
       </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="lead">I'm a marketing analytics professional finishing my BBA at Baruch College — with a track record of turning complex data into growth that shows up in the numbers.</p>
-          <p>I started by founding a basketball e-commerce brand in Indonesia at 16, scaling to $6,500/month through influencer marketing and data-driven channel optimization. That wired me to think about growth from first principles.</p>
-          <p>At <strong>Leaf Home</strong>, I managed paid media campaigns across Meta, TikTok, and Nextdoor, and built <strong>GeoLink</strong> — a proprietary ZIP/DMA attribution dashboard that connected platform spend to CRM revenue, so regional marketing effectiveness was finally measurable. That work improved ROAS&nbsp;37%&nbsp;YoY.</p>
-          <p>At <strong>Fox Corporation</strong>, I work on digital engagement for OutKick — partnering with BI, product, and editorial to analyze super-user behavior and drive retention initiatives, including a full presentation to senior leadership with two SVPs in the room.</p>
+    </div>
+
+    <div class="proj-slider-outer">
+      <div class="proj-slider" id="projSlider">
+
+        <div class="proj-card reveal" data-id="pigeon">
+          <div class="proj-card-accent" style="background: var(--fox-red)"></div>
+          <div class="proj-card-inner">
+            <div class="proj-card-meta">
+              <span class="proj-org">Fox · OutKick</span>
+              <span class="proj-year">2026</span>
+            </div>
+            <div class="proj-icon">🕊</div>
+            <h3>Project Pigeon</h3>
+            <p class="proj-teaser">Brand loyalty initiative for OutKick's most valuable users — built the case, built the MVP, took it to the boardroom.</p>
+            <div class="proj-tags"><span>Retention</span><span>CRM</span><span>AI Prototype</span></div>
+            <div class="proj-cta-row">Read the story <span>→</span></div>
+          </div>
         </div>
-        <div class="about-cards reveal">
-          <div class="acard">
-            <div class="acard-icon">🎓</div>
-            <div>
-              <h4>Education</h4>
-              <p>Baruch College — BBA Marketing Analytics<br/><em>Expected May 2026</em></p>
-              <p>BMCC — AAS Digital Marketing<br/><em>GPA 3.94 · May 2024</em></p>
+
+        <div class="proj-card reveal" data-id="geolink">
+          <div class="proj-card-accent" style="background: var(--leaf-green)"></div>
+          <div class="proj-card-inner">
+            <div class="proj-card-meta">
+              <span class="proj-org">Leaf Home</span>
+              <span class="proj-year">2024–26</span>
             </div>
+            <div class="proj-icon">📊</div>
+            <h3>GeoLink</h3>
+            <p class="proj-teaser">Built a ZIP/DMA attribution system from scratch to connect platform spend to CRM revenue — and ended the guesswork.</p>
+            <div class="proj-tags"><span>Attribution</span><span>ZIP/DMA</span><span>+37% ROAS</span></div>
+            <div class="proj-cta-row">Read the story <span>→</span></div>
           </div>
-          <div class="acard">
-            <div class="acard-icon">📍</div>
-            <div>
-              <h4>Location & Status</h4>
-              <p>Queens, New York City<br/><em>OPT Authorized · No sponsorship cost</em></p>
+        </div>
+
+        <div class="proj-card reveal" data-id="cleannkick">
+          <div class="proj-card-accent" style="background: #F97316"></div>
+          <div class="proj-card-inner">
+            <div class="proj-card-meta">
+              <span class="proj-org">CUNY Baruch</span>
+              <span class="proj-year">2023</span>
             </div>
+            <div class="proj-icon">👟</div>
+            <h3>Clean N Kick</h3>
+            <p class="proj-teaser">On-demand sneaker cleaning for New York City. Pitched it live, won $1,000 at Blackstone Launchpad.</p>
+            <div class="proj-tags"><span>Startup</span><span>Pitch</span><span>$1K Winner</span></div>
+            <div class="proj-cta-row">Read the story <span>→</span></div>
           </div>
-          <div class="acard">
-            <div class="acard-icon">🎯</div>
-            <div>
-              <h4>Open To</h4>
-              <p>Marketing Analyst · Growth Associate · Media Analyst<br/><em>Available July 1, 2026</em></p>
+        </div>
+
+        <div class="proj-card reveal" data-id="bball">
+          <div class="proj-card-accent" style="background: #6366F1"></div>
+          <div class="proj-card-inner">
+            <div class="proj-card-meta">
+              <span class="proj-org">Jakarta, Indonesia</span>
+              <span class="proj-year">2019–22</span>
             </div>
+            <div class="proj-icon">🏀</div>
+            <h3>BBALLSTORE.ID</h3>
+            <p class="proj-teaser">Basketball social commerce brand. Built it from zero at 16. Scaled to $6,500/month before I knew what "growth marketing" meant.</p>
+            <div class="proj-tags"><span>E-Commerce</span><span>Influencer Mktg</span><span>Age 16</span></div>
+            <div class="proj-cta-row">Read the story <span>→</span></div>
           </div>
-          <div class="acard">
-            <div class="acard-icon">🏆</div>
+        </div>
+
+        <div class="proj-card reveal" data-id="bmcc">
+          <div class="proj-card-accent" style="background: var(--accent)"></div>
+          <div class="proj-card-inner">
+            <div class="proj-card-meta">
+              <span class="proj-org">CUNY BMCC</span>
+              <span class="proj-year">2024</span>
+            </div>
+            <div class="proj-icon">📣</div>
+            <h3>BMCC Marketing Club</h3>
+            <p class="proj-teaser">Founded BMCC's first marketing student community — built the structure, ran the events, connected students to industry.</p>
+            <div class="proj-tags"><span>Leadership</span><span>Community</span><span>Founder</span></div>
+            <div class="proj-cta-row">Read the story <span>→</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="slider-hint">← Scroll to explore →</div>
+    </div>
+
+    <!-- Expand Panel -->
+    <div class="proj-expand" id="projExpand">
+      <div class="container">
+        <div class="proj-expand-inner">
+          <div class="proj-expand-hd">
             <div>
-              <h4>Recognition</h4>
-              <p>Blackstone Launchpad $1,000 Winner<br/><em>CUNY Clash Finalist · Academic Excellence Award</em></p>
+              <span class="proj-expand-org" id="expandOrg"></span>
+              <h2 class="proj-expand-title" id="expandTitle"></h2>
+            </div>
+            <button class="proj-expand-close" id="projClose">✕</button>
+          </div>
+          <div class="proj-expand-cols">
+            <div class="pec-col">
+              <div class="pec-label">The Problem</div>
+              <p id="expandProblem"></p>
+            </div>
+            <div class="pec-col">
+              <div class="pec-label">The Approach</div>
+              <p id="expandApproach"></p>
+            </div>
+            <div class="pec-col">
+              <div class="pec-label">The Output</div>
+              <ul id="expandOutput"></ul>
             </div>
           </div>
         </div>
@@ -232,12 +238,169 @@
     </div>
   </section>
 
-  <!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
-  <section id="experience" class="section section-light">
+  <!-- ══════════════════════ THREE PILLARS ══════════════════════ -->
+  <section id="pillars" class="section pillars-section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="label">Experience</span>
-        <h2>Where I've Built Things.</h2>
+        <span class="label label-light">What drives me</span>
+        <h2>Three things that<br/>make Eric, Eric.</h2>
+      </div>
+      <div class="pillars-grid">
+
+        <div class="pillar-card reveal">
+          <div class="pillar-num">01</div>
+          <div class="pillar-icon">🚀</div>
+          <h3>Entrepreneurial</h3>
+          <p>Started BBALLSTORE.ID at 16 in Jakarta with zero capital — scaled it to $6,500/month. Later won $1,000 pitching Clean N Kick at Blackstone Launchpad. Building from nothing is how he thinks, not just what he's done.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-num">02</div>
+          <div class="pillar-icon">⚡</div>
+          <h3>Proactive</h3>
+          <p>At Fox, nobody asked for an AI prototype — Eric built it on Replit and demoed it live to SVPs. At Leaf Home, nobody asked for GeoLink — he built it because the business needed the answer. He doesn't wait for the brief.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-num">03</div>
+          <div class="pillar-icon">📈</div>
+          <h3>Data & Business Savvy</h3>
+          <p>GeoLink wasn't just a dashboard — it was a business argument made in data: here's what's working, here's what isn't, here's where to move the money. Eric builds things that answer real questions, not just things that look good in a deck.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TESTIMONIALS ══════════════════════ -->
+  <section id="testimonials" class="section testi-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">Testimonials</span>
+        <h2>What people say.</h2>
+      </div>
+    </div>
+    <div class="testi-track-outer">
+      <div class="testi-track">
+
+        <div class="testi-card">
+          <p class="testi-quote">"Eric consistently went beyond what was asked. He saw problems the team hadn't articulated yet, and built solutions before anyone put them on a roadmap."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:var(--fox-red)">TW</div>
+            <div>
+              <div class="testi-name">Timothy White</div>
+              <div class="testi-role">Sr. Digital Acquisition · Leaf Home</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">"Working with Eric you realize quickly he thinks in outcomes, not tasks. Give him a problem and he comes back with a solution — and usually a slide deck."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:#6366F1">OL</div>
+            <div>
+              <div class="testi-name">Olivia</div>
+              <div class="testi-role">Fox Corporation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">"Eric's the kind of person who makes the team better just by being in the room. Curious, sharp, and never afraid to push back when the data says otherwise."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:var(--leaf-green)">ER</div>
+            <div>
+              <div class="testi-name">Eric R.</div>
+              <div class="testi-role">Leaf Home</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="testi-card">
+          <p class="testi-quote">"Eric consistently went beyond what was asked. He saw problems the team hadn't articulated yet, and built solutions before anyone put them on a roadmap."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:var(--fox-red)">TW</div>
+            <div>
+              <div class="testi-name">Timothy White</div>
+              <div class="testi-role">Sr. Digital Acquisition · Leaf Home</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">"Working with Eric you realize quickly he thinks in outcomes, not tasks. Give him a problem and he comes back with a solution — and usually a slide deck."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:#6366F1">OL</div>
+            <div>
+              <div class="testi-name">Olivia</div>
+              <div class="testi-role">Fox Corporation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <p class="testi-quote">"Eric's the kind of person who makes the team better just by being in the room. Curious, sharp, and never afraid to push back when the data says otherwise."</p>
+          <div class="testi-person">
+            <div class="testi-avatar" style="background:var(--leaf-green)">ER</div>
+            <div>
+              <div class="testi-name">Eric R.</div>
+              <div class="testi-role">Leaf Home</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROFILE / CTA ══════════════════════ -->
+  <section id="profile" class="section profile-section">
+    <div class="container">
+      <div class="profile-inner reveal">
+        <div class="profile-photo-wrap">
+          <img
+            src="C26E6B82-E361-4254-832D-1CFE6DF19D8F.png"
+            alt="Eric Salim Marlie"
+            class="profile-photo"
+            onerror="this.parentElement.classList.add('no-photo-profile')"
+          />
+          <div class="profile-photo-placeholder">ESM</div>
+        </div>
+        <div class="profile-content">
+          <div class="profile-status">
+            <span class="dot-pulse dot-pulse-green"></span>
+            Open for full-time · Starting July 2026
+          </div>
+          <h2 class="profile-name">Eric Salim Marlie</h2>
+          <p class="profile-role">Marketing Analytics &nbsp;·&nbsp; Performance Marketing &nbsp;·&nbsp; Growth</p>
+          <div class="profile-location">
+            <span>📍 New York City</span>
+            <span class="loc-sep">·</span>
+            <span>Open to SF / Bay Area relocation</span>
+            <span class="loc-sep">·</span>
+            <span>OPT Authorized</span>
+          </div>
+          <div class="profile-ctas">
+            <a href="mailto:eriicsalim@yahoo.com" class="btn-primary">Hire Eric →</a>
+            <a href="https://linkedin.com/in/ericsalimm" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-ghost-light">Talk to Eric</a>
+          </div>
+          <div class="profile-links">
+            <a href="mailto:eriicsalim@yahoo.com">eriicsalim@yahoo.com</a>
+            <span>·</span>
+            <a href="https://linkedin.com/in/ericsalimm" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericsalimm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ JOURNEY ══════════════════════ -->
+  <section id="journey" class="section section-light">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="label">Journey</span>
+        <h2>How I got here.</h2>
       </div>
 
       <div class="timeline">
@@ -263,23 +426,14 @@
               </div>
               <span class="tl-date">Jan 2026 – Present</span>
             </div>
-            <!-- Work photos -->
-            <div class="tl-photo-duo">
-              <div class="tl-photo-wrap tl-photo-wrap-sign">
-                <img src="assets/fox-sign.jpg" alt="Eric at Fox Corporation, NYC" class="tl-photo tl-photo-sign" onerror="this.parentElement.style.display='none'"/>
-              </div>
-              <div class="tl-photo-wrap tl-photo-wrap-team">
-                <img src="assets/fox-outkick.jpg" alt="Eric with OutKick team" class="tl-photo tl-photo-team" onerror="this.parentElement.style.display='none'"/>
-              </div>
-            </div>
+            <p class="tl-story">Walking into Fox's Sixth Avenue office with a badge and a charter to figure out why OutKick's most valuable users were quietly disappearing — I had to earn every room I was in.</p>
             <ul class="tl-list">
-              <li>Partner with editorial, product, and BI teams to analyze user retention trends and identify the root causes of "super user" decline at OutKick</li>
-              <li>Contributed to a loyalty initiative presented to senior leadership in a full boardroom pitch with <strong>15+ colleagues including two SVPs</strong></li>
-              <li>Built and maintain a CRM performance dashboard that surfaced behavioral trends and accelerated campaign decision-making</li>
-              <li>Prototyped an AI-assisted MVP using <strong>Replit and Claude Code</strong> — demoed live during the final leadership presentation</li>
+              <li>Diagnosed super-user decline by partnering across BI, editorial, and product to map behavioral drop-off</li>
+              <li>Presented full retention playbook to 15+ stakeholders — two SVPs in the room — and made it land</li>
+              <li>Prototyped AI-assisted MVP on Replit and Claude Code, demoed live — nobody asked for it, the problem needed it</li>
             </ul>
             <div class="tl-tags">
-              <span>Retention Analytics</span><span>CRM Dashboard</span><span>Stakeholder Presentation</span><span>Claude Code</span>
+              <span>Retention Analytics</span><span>CRM</span><span>Claude Code</span><span>SVP Presentation</span>
             </div>
           </div>
         </div>
@@ -294,7 +448,7 @@
             <div class="tl-head">
               <div class="tl-company-info">
                 <div class="tl-logo tl-logo-leaf">
-                  <svg width="22" height="22" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
                     <polygon points="22,2 38,11 22,20 6,11" fill="#4ADE80" opacity="0.6"/>
                     <polygon points="22,11 38,20 22,29 6,20" fill="#22C55E" opacity="0.8"/>
                     <polygon points="22,20 38,29 22,38 6,29" fill="#fff"/>
@@ -307,22 +461,22 @@
               </div>
               <span class="tl-date">May 2024 – Jan 2026</span>
             </div>
-            <!-- Work photos -->
             <div class="tl-photo-duo">
               <div class="tl-photo-wrap tl-photo-wrap-team">
                 <img src="eric-leafteam" alt="Eric with Leaf Home team" class="tl-photo tl-photo-team" onerror="this.parentElement.style.display='none'"/>
               </div>
               <div class="tl-photo-wrap tl-photo-wrap-product">
-                <img src="assets/leaf-droplet.jpg" alt="Leaf Home The Droplet storm simulator" class="tl-photo tl-photo-product" onerror="this.parentElement.style.display='none'"/>
+                <img src="leaf-droplet" alt="Leaf Home The Droplet" class="tl-photo tl-photo-product" onerror="this.parentElement.style.display='none'"/>
               </div>
             </div>
+            <p class="tl-story">Leaf Home gave me real ownership — but I quickly realized the biggest problem wasn't running the campaigns. It was that nobody could tell which regions were actually working.</p>
             <ul class="tl-list">
-              <li>Managed multi-platform paid media campaigns across Meta, TikTok, and Nextdoor — applied structured A/B testing and incrementality analysis to guide allocation decisions at regional scale</li>
-              <li>Built <strong>GeoLink</strong> — a proprietary ZIP/DMA attribution dashboard connecting platform spend to CRM revenue, so regional marketing effectiveness could finally be measured; improved <strong>ROAS 37% YoY</strong></li>
-              <li>Led monthly creative performance reporting workflow across Media and Creative teams, translating data into testing priorities and spend decisions</li>
+              <li>Managed multi-platform paid media across Meta, TikTok, and Nextdoor — A/B testing and incrementality analysis at regional scale</li>
+              <li>Built GeoLink from scratch — ZIP/DMA attribution system connecting platform spend to CRM revenue by geography</li>
+              <li>Improved ROAS 37% YoY by enabling geo-level budget decisions that were previously impossible</li>
             </ul>
             <div class="tl-tags">
-              <span>Multi-Platform Paid Media</span><span>Meta · TikTok</span><span>Attribution Modeling</span><span>+37% ROAS</span>
+              <span>Media Buying</span><span>Attribution</span><span>GeoLink</span><span>+37% ROAS</span>
             </div>
           </div>
         </div>
@@ -336,9 +490,7 @@
           <div class="tl-body">
             <div class="tl-head">
               <div class="tl-company-info">
-                <div class="tl-logo tl-logo-bmcc">
-                  <span>CUNY</span>
-                </div>
+                <div class="tl-logo tl-logo-bmcc"><span>CUNY</span></div>
                 <div>
                   <h3>Marketing Research Teaching Assistant</h3>
                   <p class="tl-co">CUNY BMCC &nbsp;·&nbsp; Manhattan, NY</p>
@@ -346,12 +498,12 @@
               </div>
               <span class="tl-date">Aug 2023 – May 2024</span>
             </div>
+            <p class="tl-story">Teaching forces clarity. Explaining statistical analysis to 25 students taught me to translate data into language anyone can act on.</p>
             <ul class="tl-list">
-              <li>Guided 25+ students through survey design, statistical analysis, and data interpretation using Qualtrics and Excel</li>
+              <li>Guided 25+ students through Qualtrics survey design and data interpretation</li>
+              <li>Sharpened the ability to make data insights accessible to non-technical audiences</li>
             </ul>
-            <div class="tl-tags">
-              <span>Qualtrics</span><span>Statistical Analysis</span><span>Mentorship</span>
-            </div>
+            <div class="tl-tags"><span>Qualtrics</span><span>Statistical Analysis</span><span>Mentorship</span></div>
           </div>
         </div>
 
@@ -371,344 +523,16 @@
               </div>
               <span class="tl-date">Dec 2019 – Aug 2022</span>
             </div>
+            <p class="tl-story">Started at 16. No investors, no playbook, no mentors. Just a gap in the market for Indonesian basketball gear and the stubbornness to fill it.</p>
             <ul class="tl-list">
-              <li>Founded and scaled a basketball social commerce brand to <strong>Rp96M ($6,500/month)</strong> in revenue from zero, starting at age 16</li>
-              <li>Managed influencer partnerships, marketplace optimization (Tokopedia, Shopee), and end-to-end operations across digital channels</li>
+              <li>Built basketball social commerce brand from zero to $6,500/month — independently, starting at age 16</li>
+              <li>Managed influencer partnerships and marketplace optimization across Tokopedia and Shopee</li>
+              <li>Ran the full operation: sourcing, inventory, fulfillment, and data-driven marketing</li>
             </ul>
-            <div class="tl-tags">
-              <span>$6.5K/mo Revenue</span><span>Influencer Marketing</span><span>E-Commerce</span><span>Founded Age 16</span>
-            </div>
+            <div class="tl-tags"><span>Founded Age 16</span><span>$6.5K/mo Revenue</span><span>Influencer Marketing</span></div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="label">Projects</span>
-        <h2>Work That Moved Numbers.</h2>
-      </div>
-
-      <div class="projects-grid">
-
-        <div class="pcard pcard-hero reveal">
-          <div class="pcard-glow"></div>
-          <div class="pcard-inner">
-            <!-- GeoLink dashboard mockup -->
-            <div class="geolink-mockup">
-              <div class="gm-topbar">
-                <span class="gm-dot gm-red"></span><span class="gm-dot gm-yellow"></span><span class="gm-dot gm-green"></span>
-                <span class="gm-title">GeoLink — Regional Attribution Dashboard</span>
-              </div>
-              <div class="gm-body">
-                <div class="gm-sidebar">
-                  <div class="gm-filter active">All Regions</div>
-                  <div class="gm-filter">Northeast</div>
-                  <div class="gm-filter">Southeast</div>
-                  <div class="gm-filter">Midwest</div>
-                </div>
-                <div class="gm-main">
-                  <div class="gm-metric-row">
-                    <div class="gm-metric">
-                      <span class="gm-m-label">Platform Spend</span>
-                      <span class="gm-m-val">Meta · TikTok · Nextdoor</span>
-                    </div>
-                    <div class="gm-metric">
-                      <span class="gm-m-label">CRM Revenue Match</span>
-                      <span class="gm-m-val gm-green-val">↑ 37% ROAS YoY</span>
-                    </div>
-                  </div>
-                  <div class="gm-bars">
-                    <div class="gm-bar-row"><span class="gm-bar-label">NY-DMA</span><div class="gm-bar-track"><div class="gm-bar-fill" style="width:88%"></div></div><span class="gm-bar-num">High</span></div>
-                    <div class="gm-bar-row"><span class="gm-bar-label">LA-DMA</span><div class="gm-bar-track"><div class="gm-bar-fill" style="width:72%"></div></div><span class="gm-bar-num">Med</span></div>
-                    <div class="gm-bar-row"><span class="gm-bar-label">CHI-DMA</span><div class="gm-bar-track"><div class="gm-bar-fill" style="width:61%"></div></div><span class="gm-bar-num">Med</span></div>
-                    <div class="gm-bar-row"><span class="gm-bar-label">ATL-DMA</span><div class="gm-bar-track"><div class="gm-bar-fill" style="width:45%"></div></div><span class="gm-bar-num">Low</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pcard-top">
-              <div class="pcard-icon pcard-icon-geo">📊</div>
-              <div class="pcard-kpis">
-                <div class="kpi">
-                  <span class="kpi-v">37%</span>
-                  <span class="kpi-l">ROAS YoY</span>
-                </div>
-                <div class="kpi">
-                  <span class="kpi-v">ZIP/DMA</span>
-                  <span class="kpi-l">Attribution Level</span>
-                </div>
-              </div>
-            </div>
-            <span class="pcard-tag-top">Attribution System &nbsp;·&nbsp; Leaf Home</span>
-            <h3>GeoLink Dashboard</h3>
-            <p>Built a proprietary ZIP/DMA attribution system from scratch to solve a real problem: paid media and CRM data lived in separate worlds, so nobody knew which regions were actually working. GeoLink bridged them — connecting platform spend on Meta, TikTok, and Nextdoor to CRM revenue by geography. Result: 37% ROAS improvement and a clear answer to where to allocate budget.</p>
-            <div class="pcard-tags">
-              <span>Excel</span><span>Attribution</span><span>CRM</span><span>Media Buying</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="pcard reveal">
-          <div class="pcard-inner">
-            <div class="pcard-photo-wrap pcard-photo-wrap-outkick">
-              <img src="assets/fox-outkick.jpg" alt="Eric at OutKick with team" class="pcard-photo" onerror="this.parentElement.style.display='none'" />
-            </div>
-            <div class="pcard-top">
-              <div class="pcard-icon pcard-icon-fox">📺</div>
-            </div>
-            <span class="pcard-tag-top">Growth Strategy &nbsp;·&nbsp; Fox / OutKick</span>
-            <h3>Super User Retention Initiative</h3>
-            <p>Diagnosed declining "super user" engagement at OutKick. Partnered cross-functionally with BI, editorial, product, and finance — built the case and presented the full retention playbook to 15+ stakeholders including two SVPs.</p>
-            <div class="pcard-tags">
-              <span>Retention</span><span>Cross-functional</span><span>SVP Presentation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="pcard reveal">
-          <div class="pcard-inner">
-            <div class="pcard-top">
-              <div class="pcard-icon pcard-icon-crm">🧩</div>
-            </div>
-            <span class="pcard-tag-top">Data Infrastructure &nbsp;·&nbsp; Fox Corporation</span>
-            <h3>CRM Performance Dashboard</h3>
-            <p>Built an automated dashboard surfacing real-time user behavior metrics across Fox's CRM. Enabled faster, data-driven decisions across email, paid social, and OOH campaigns.</p>
-            <div class="pcard-tags">
-              <span>Braze</span><span>CRM</span><span>Behavioral Data</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="pcard reveal">
-          <div class="pcard-inner">
-            <div class="pcard-top">
-              <div class="pcard-icon pcard-icon-bball">🏀</div>
-              <div class="pcard-kpis">
-                <div class="kpi">
-                  <span class="kpi-v">$6.5K</span>
-                  <span class="kpi-l">Monthly Revenue</span>
-                </div>
-              </div>
-            </div>
-            <span class="pcard-tag-top">E-Commerce Brand &nbsp;·&nbsp; Jakarta, Indonesia</span>
-            <h3>BBALLSTORE.ID</h3>
-            <p>Started at 16. Built a basketball social commerce brand to $6,500/month through influencer partnerships and marketplace optimization across Tokopedia &amp; Shopee. First real lesson in growth from zero.</p>
-            <div class="pcard-tags">
-              <span>Influencer Marketing</span><span>Social Commerce</span><span>Tokopedia</span>
-            </div>
-            <a href="https://www.instagram.com/bballstore.id?igsh=aG9hMnJ4MTRiOGth" target="_blank" rel="noopener noreferrer" class="ig-link">
-              <span class="ig-icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg></span>
-              <span>@bballstore.id &nbsp;·&nbsp; View on Instagram →</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="pcard reveal">
-          <div class="pcard-inner">
-            <div class="pcard-photo-wrap">
-              <img src="eric-cleannkick" alt="Eric pitching Clean N Kick at CUNY" class="pcard-photo" onerror="this.parentElement.style.display='none'" />
-            </div>
-            <div class="pcard-top">
-              <div class="pcard-icon pcard-icon-cnk">👟</div>
-              <div class="pcard-kpis">
-                <div class="kpi"><span class="kpi-v">$1K</span><span class="kpi-l">Blackstone Prize</span></div>
-              </div>
-            </div>
-            <span class="pcard-tag-top">Startup Pitch &nbsp;·&nbsp; CUNY Baruch / BMCC</span>
-            <h3>Clean N Kick</h3>
-            <p>On-demand shoe cleaning service for New Yorkers. Pitched live at CUNY's Blackstone Launchpad — won $1,000 first place. Also a CUNY Clash startup pitch finalist. Built the full business model, deck, and MVP concept solo.</p>
-            <div class="pcard-tags">
-              <span>Startup</span><span>Pitch Deck</span><span>NYC Market</span><span>$1K Winner</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ SKILLS ══════════════════════ -->
-  <section id="skills" class="section section-light">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="label">Skills</span>
-        <h2>Tools &amp; Stack.</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-cat reveal">
-          <h4>Data &amp; Analytics</h4>
-          <div class="skill-tags">
-            <span class="s-hi">Excel (Advanced)</span>
-            <span class="s-hi">SQL</span>
-            <span class="s-hi">Python</span>
-            <span>R</span>
-            <span class="s-hi">Tableau</span>
-            <span class="s-hi">Google Analytics 4</span>
-            <span>Adobe Analytics</span>
-          </div>
-        </div>
-        <div class="skill-cat reveal">
-          <h4>Experimentation &amp; Measurement</h4>
-          <div class="skill-tags">
-            <span class="s-hi">A/B Testing</span>
-            <span class="s-hi">Incrementality Analysis</span>
-            <span class="s-hi">Attribution Modeling</span>
-            <span>Funnel Analysis</span>
-            <span>Cohort Analysis</span>
-          </div>
-        </div>
-        <div class="skill-cat reveal">
-          <h4>Paid Media &amp; Platforms</h4>
-          <div class="skill-tags">
-            <span class="s-hi">Meta Ads</span>
-            <span class="s-hi">TikTok Ads</span>
-            <span>Google Ads</span>
-            <span>Reddit Ads</span>
-            <span>Taboola</span>
-            <span>Nextdoor</span>
-            <span class="s-hi">Braze</span>
-            <span>Smartly.io</span>
-          </div>
-        </div>
-        <div class="skill-cat reveal">
-          <h4>AI &amp; Development</h4>
-          <div class="skill-tags">
-            <span class="s-hi">Claude Code</span>
-            <span class="s-hi">Replit</span>
-            <span>OpenAI Codex</span>
-            <span>AI-Assisted Prototyping</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="certs reveal">
-        <div class="cert">
-          <span class="cert-check">✓</span>
-          <div>
-            <p>Google Analytics Certification</p>
-            <span>Google · Dec 2025</span>
-          </div>
-        </div>
-        <div class="cert">
-          <span class="cert-check">✓</span>
-          <div>
-            <p>Google Ads Measurement Certification</p>
-            <span>Google · Dec 2025</span>
-          </div>
-        </div>
-        <div class="cert">
-          <span class="cert-check">✓</span>
-          <div>
-            <p>AI-Powered Marketer</p>
-            <span>Semrush · May 2024</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════ RECOGNITION & LEADERSHIP ══════════════════ -->
-  <section id="recognition" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="label">Recognition &amp; Leadership</span>
-        <h2>Beyond the Job Description.</h2>
-      </div>
-
-      <!-- Awards strip -->
-      <div class="awards-row reveal">
-        <div class="award-card">
-          <div class="award-photo-wrap">
-            <img src="assets/bmcc-excellence.jpg" alt="Academic Excellence in Digital Marketing Award" class="award-photo" onerror="this.parentElement.style.display='none'" />
-          </div>
-          <div class="award-body">
-            <span class="award-emoji">🥇</span>
-            <h4>Academic Excellence in Digital Marketing</h4>
-            <p>Recognized as the top student in the Digital Marketing program at CUNY BMCC by the Department of Business Management.</p>
-            <span class="award-meta">CUNY BMCC &nbsp;·&nbsp; May 2024</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <div class="award-photo-wrap">
-            <img src="assets/bmcc-award-stage.jpg" alt="BMCC Award Ceremony on stage" class="award-photo" onerror="this.parentElement.style.display='none'" />
-          </div>
-          <div class="award-body">
-            <span class="award-emoji">🏆</span>
-            <h4>Blackstone Launchpad Competition</h4>
-            <p>Won $1,000 first place at CUNY Baruch's Blackstone Launchpad competition pitching Clean N Kick — an on-demand shoe cleaning startup for New York City.</p>
-            <span class="award-meta">CUNY Baruch &nbsp;·&nbsp; Oct 2023</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <div class="award-body award-body-solo">
-            <span class="award-emoji">🎤</span>
-            <h4>CUNY Clash Pitch Finalist</h4>
-            <p>Selected as a finalist in the CUNY-wide Clash startup pitch competition, competing against student ventures across all CUNY campuses.</p>
-            <span class="award-meta">CUNY System &nbsp;·&nbsp; May 2023</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leadership cards -->
-      <div class="lead-grid">
-
-        <div class="lead-card reveal">
-          <div class="lead-photo-wrap">
-            <img src="assets/bmcc-club.jpg" alt="BMCC Marketing Club" class="lead-photo" onerror="this.parentElement.classList.add('no-photo')" />
-            <div class="lead-photo-placeholder">📣</div>
-          </div>
-          <div class="lead-body">
-            <div class="lead-org-badge">BMCC Marketing Club</div>
-            <h3>Founder &amp; President</h3>
-            <p>Built the BMCC Marketing Club from scratch — organized industry speaker events, mentored students, and created a real-world marketing learning environment at CUNY BMCC.</p>
-            <span class="lead-tenure">Jan 2024 – May 2024</span>
-            <a href="https://www.instagram.com/mcbmcc?igsh=M2JtNTE3Mmk3Y3B3" target="_blank" rel="noopener noreferrer" class="ig-link ig-link-sm">
-              <span class="ig-icon-wrap"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg></span>
-              <span>@mcbmcc on Instagram →</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="lead-card reveal">
-          <div class="lead-body lead-body-full">
-            <div class="lead-org-badge lead-org-permias">PERMIAS NYC</div>
-            <h3>Director of External Affairs</h3>
-            <p>Lead external partnerships and represent the Indonesian student community in New York City across academic, professional, and cultural initiatives. Previously served as Vice Director of Student Affairs.</p>
-            <span class="lead-tenure">June 2025 – Present &nbsp;·&nbsp; Previously Vice Director July 2024 – May 2025</span>
-            <div class="lead-tags">
-              <span>Community Leadership</span><span>External Affairs</span><span>NYC</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ CONTACT ══════════════════════ -->
-  <section id="contact" class="section contact-dark">
-    <div class="container">
-      <div class="contact-inner reveal">
-        <span class="label label-light">Contact</span>
-        <h2>Let's build something<br/>that moves the needle.</h2>
-        <p>Open to full-time analyst and associate roles starting July 2026 — especially where marketing, data, and product strategy intersect. Reach out anytime.</p>
-        <div class="contact-links">
-          <a href="mailto:eriicsalim@yahoo.com" class="clink">
-            <span class="clink-icon">✉</span><span>eriicsalim@yahoo.com</span>
-          </a>
-          <a href="https://linkedin.com/in/ericsalimm" target="_blank" rel="noopener noreferrer" class="clink">
-            <span class="clink-icon">in</span><span>linkedin.com/in/ericsalimm</span>
-          </a>
-        </div>
-        <a href="mailto:eriicsalim@yahoo.com" class="btn-primary btn-light">Send a message →</a>
       </div>
     </div>
   </section>
