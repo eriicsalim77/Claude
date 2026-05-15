@@ -84,7 +84,7 @@ const projects = {
     title: 'GeoLink',
     accent: '#16A34A',
     problem: 'Paid media spend lived on platforms: Meta, TikTok, Nextdoor. CRM revenue lived in a separate system. Nobody could connect the two. Which regions were generating returns? Which weren\'t? Where should next month\'s budget go? Nobody had a reliable answer.',
-    approach: 'I built GeoLink from scratch: a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography. For the first time, the media team had a single view of regional performance across all three channels.',
+    approach: 'I built GeoLink from scratch: a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography.',
     output: [
       'ROAS improved 37% year over year through geo-level budget reallocation that was previously impossible to justify',
       'Replaced regional guesswork with a repeatable data model',
@@ -109,7 +109,7 @@ const projects = {
     title: 'BBALLSTORE.ID',
     accent: '#6366F1',
     problem: 'Indonesian basketball players had limited access to quality gear, and no strong local brand was serving them through social commerce channels.',
-    approach: 'Started with nothing: no capital, no playbook, no mentors. Built a brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing end to end.',
+    approach: 'Started from scratch. Built a brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing end to end.',
     output: [
       'Scaled from zero to $6,500 per month in revenue, starting at 16',
       'Built and ran every part of the operation independently',
