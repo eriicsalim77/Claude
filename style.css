@@ -16,8 +16,7 @@
   --fox-red:    #E8272A;
   --leaf-green: #16A34A;
   --green-lt:   #22C55E;
-  --font:       -apple-system, BlinkMacSystemFont, "SF Pro Display",
-                "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font:       'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --radius:     20px;
   --radius-sm:  12px;
   --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
