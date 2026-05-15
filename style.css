@@ -360,22 +360,24 @@ strong { font-weight: 600; }
   white-space: nowrap;
 }
 .hero-logos-row {
-  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
 }
-.hl-item {
-  display: flex; align-items: center; gap: 6px;
-  color: rgba(255,255,255,0.3);
-  font-size: 13px; font-weight: 500;
+.hl-chip {
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.94);
+  border-radius: 8px;
+  padding: 6px 12px;
+  height: 36px;
+  box-sizing: border-box;
 }
 .hl-logo {
-  height: 20px;
+  height: 18px;
   width: auto;
   max-width: 80px;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1) opacity(0.5);
 }
-.hl-sep { color: rgba(255,255,255,0.15); font-size: 16px; }
+.hl-logo-bball { mix-blend-mode: multiply; }
 
 /* ════════════════════════════════════════
    PROJECTS SLIDER
