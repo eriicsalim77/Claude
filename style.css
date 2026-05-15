@@ -514,6 +514,20 @@ strong { font-weight: 600; }
   flex-shrink: 0;
 }
 .proj-expand-close:hover { background: rgba(0,0,0,0.1); color: var(--text); }
+.expand-photo-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.expand-photo-row:empty { margin-bottom: 0; }
+.exp-photo {
+  flex: 1;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
 .proj-expand-cols {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -896,6 +910,7 @@ footer p { font-size: 13px; color: rgba(255,255,255,0.2); }
   .hero-inner { padding-top: 100px; padding-bottom: 32px; }
   .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
   .proj-expand-cols { grid-template-columns: 1fr; gap: 28px; }
+  .exp-photo { height: 180px; }
 }
 
 @media (max-width: 768px) {

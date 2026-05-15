@@ -95,6 +95,7 @@ const projects = {
     org: 'CUNY Baruch · Blackstone LaunchPad · 2023',
     title: 'Clean N Kick',
     accent: '#F97316',
+    photo: 'IMG_9068.jpeg',
     problem: 'New Yorkers are serious about their sneakers. Finding reliable, convenient shoe cleaning in the city is surprisingly hard. Nobody had built the on-demand version of it yet.',
     approach: 'Designed the full business from scratch: service model, pricing strategy, unit economics, customer discovery, competitive analysis, and pitch deck. Built and delivered it independently, under competition pressure.',
     output: [
@@ -119,6 +120,7 @@ const projects = {
     org: 'CUNY BMCC · 2024',
     title: 'BMCC Marketing Club',
     accent: '#0052CC',
+    photos: ['IMG_0771.jpeg', 'IMG_9080.jpeg'],
     problem: 'BMCC students interested in marketing had no dedicated community, no industry exposure, and no real-world space to develop beyond what a classroom could offer.',
     approach: 'Founded the club from scratch. Built the organizational structure, organized an industry speaker series, created mentorship frameworks, and built a real learning environment while finishing my own degree.',
     output: [
@@ -129,13 +131,14 @@ const projects = {
   }
 };
 
-const expand      = document.getElementById('projExpand');
-const closeBtn    = document.getElementById('projClose');
-const expandOrg   = document.getElementById('expandOrg');
-const expandTitle = document.getElementById('expandTitle');
-const expandProb  = document.getElementById('expandProblem');
-const expandApp   = document.getElementById('expandApproach');
-const expandOut   = document.getElementById('expandOutput');
+const expand          = document.getElementById('projExpand');
+const closeBtn        = document.getElementById('projClose');
+const expandOrg       = document.getElementById('expandOrg');
+const expandTitle     = document.getElementById('expandTitle');
+const expandProb      = document.getElementById('expandProblem');
+const expandApp       = document.getElementById('expandApproach');
+const expandOut       = document.getElementById('expandOutput');
+const expandPhotoRow  = document.getElementById('expandPhotoRow');
 
 let activeCard = null;
 
@@ -164,6 +167,16 @@ document.querySelectorAll('.proj-card').forEach(card => {
     expandProb.textContent  = data.problem;
     expandApp.textContent   = data.approach;
     expandOut.innerHTML     = data.output.map(o => `<li>${o}</li>`).join('');
+
+    if (data.photos) {
+      expandPhotoRow.innerHTML = data.photos.map(src =>
+        `<img src="${src}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`
+      ).join('');
+    } else if (data.photo) {
+      expandPhotoRow.innerHTML = `<img src="${data.photo}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`;
+    } else {
+      expandPhotoRow.innerHTML = '';
+    }
 
     expand.classList.add('open');
 
