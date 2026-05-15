@@ -368,11 +368,12 @@ strong { font-weight: 600; }
   font-size: 13px; font-weight: 500;
 }
 .hl-logo {
-  height: 22px;
+  height: 20px;
   width: auto;
-  max-width: 90px;
+  max-width: 80px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.45);
+  display: block;
+  filter: brightness(0) invert(1) opacity(0.5);
 }
 .hl-sep { color: rgba(255,255,255,0.15); font-size: 16px; }
 
@@ -800,17 +801,15 @@ strong { font-weight: 600; }
 }
 .tl-company-info { display: flex; align-items: center; gap: 14px; }
 .tl-logo {
-  width: 40px; height: 40px;
+  width: 44px; height: 44px;
   border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  font-size: 20px;
+  overflow: hidden;
 }
-.tl-logo img   { width: 100%; height: 100%; object-fit: contain; padding: 5px; display: block; }
-.tl-logo-fox   { background: #fff; }
-.tl-logo-leaf  { background: #fff; }
-.tl-logo-bmcc  { background: #fff; }
-.tl-logo-bball { background: #fff; }
+.tl-logo img   { width: 32px; height: 32px; object-fit: contain; display: block; }
 .tl-logo-bball img { mix-blend-mode: multiply; }
 .tl-body h3 { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
 .tl-co { font-size: 14px; color: var(--text-2); margin-top: 2px; }
