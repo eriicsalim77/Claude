@@ -68,50 +68,50 @@ if (photoWrap) {
    ═══════════════════════════════════════ */
 const projects = {
   pigeon: {
-    org: 'Fox Corporation · OutKick · 2026',
-    title: 'Project Pigeon',
+    org: 'Inside Fox Corporation · OutKick · 2026',
+    title: 'OutKick Loyalty Portal Initiative',
     accent: '#E8272A',
-    problem: 'OutKick is great at acquiring sports fans. Keeping them was the harder problem. Users came, consumed content, and left. The super user — the fan who visits daily, engages deeply, and drives community — was declining. Nobody had a clear picture of why, or where the drop-off was happening.',
-    approach: 'I partnered cross-functionally with BI, editorial, product, and finance to analyze behavioral data patterns. We identified who the super users actually were, mapped their journey through the product, surfaced the specific drop-off points, and built a data-backed retention playbook with a clear recommendation for each team.',
+    problem: 'OutKick was good at acquiring sports fans. Keeping the ones who actually cared was the harder problem. The super user, the fan who visits daily, engages deeply, and drives community, was declining. Nobody had a clear picture of where the drop-off was happening, or a business case that leadership could act on.',
+    approach: 'I partnered across BI, editorial, product, and CRM to analyze behavioral patterns, identify who the super users actually were, and map where the experience was breaking down. I built a data-backed retention playbook for each team, then prototyped an AI-assisted loyalty portal concept using Replit and Claude Code and demoed it live in the final presentation.',
     output: [
-      'Senior-leadership-ready presentation pitched to 15 or more stakeholders, including 2 SVPs, in a full boardroom setting',
-      'AI-assisted MVP prototyped on Replit and Claude Code, demoed live during the final presentation — nobody asked for it, the problem needed it',
-      'Retention strategy framework handed off to product and editorial teams for execution'
+      'Retention playbook presented to 15+ stakeholders, including two SVPs, in a full boardroom setting',
+      'AI prototype built and demoed live during the final presentation',
+      'Framework handed off to product and editorial teams for execution'
     ]
   },
   geolink: {
-    org: 'Leaf Home · 2024–2026',
+    org: 'Inside Leaf Home · 2024–2026',
     title: 'GeoLink',
     accent: '#16A34A',
-    problem: 'Paid media spend lived on platforms — Meta, TikTok, Nextdoor. CRM revenue lived in a separate system. Nobody could connect the two. Which regions were generating returns? Which were not? Where should next month\'s budget go? Nobody had a reliable answer.',
-    approach: 'Built GeoLink from scratch — a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography. For the first time, the media team had a single view of regional performance across all three channels.',
+    problem: 'Paid media spend lived on platforms: Meta, TikTok, Nextdoor. CRM revenue lived in a separate system. Nobody could connect the two. Which regions were generating returns? Which weren\'t? Where should next month\'s budget go? Nobody had a reliable answer.',
+    approach: 'I built GeoLink from scratch: a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography. For the first time, the media team had a single view of regional performance across all three channels.',
     output: [
-      'Improved ROAS 37% year over year through geo-level budget reallocation that was previously impossible to justify with data',
-      'Replaced guesswork on regional allocation with a clear, repeatable data model',
+      'ROAS improved 37% year over year through geo-level budget reallocation that was previously impossible to justify',
+      'Replaced regional guesswork with a repeatable data model',
       'Established a monthly creative performance reporting workflow across Media and Creative teams'
     ]
   },
   cleannkick: {
-    org: 'CUNY Baruch · Blackstone Launchpad · 2023',
+    org: 'CUNY Baruch · Blackstone LaunchPad · 2023',
     title: 'Clean N Kick',
     accent: '#F97316',
     problem: 'New Yorkers are serious about their sneakers. Finding reliable, convenient shoe cleaning in the city is surprisingly hard. Nobody had built the on-demand version of it yet.',
-    approach: 'Designed an on-demand shoe cleaning service targeting New York City. Built the full business model, unit economics, pricing strategy, pitch deck, and MVP concept from scratch, independently, under competition pressure.',
+    approach: 'Designed the full business from scratch: service model, pricing strategy, unit economics, customer discovery, competitive analysis, and pitch deck. Built and delivered it independently, under competition pressure.',
     output: [
-      'Won $1,000 first place at CUNY Blackstone Launchpad',
-      'Selected as CUNY Clash startup pitch finalist, competing against student ventures across all CUNY campuses',
-      'Validated concept through customer discovery, competitive analysis, and unit economics modeling'
+      'Won $1,000 first place at CUNY Blackstone LaunchPad',
+      'Selected as CUNY Clash startup pitch finalist, competing across all CUNY campuses',
+      'Validated concept through real customer discovery and unit economics modeling'
     ]
   },
   bball: {
     org: 'Jakarta, Indonesia · 2019–2022',
     title: 'BBALLSTORE.ID',
     accent: '#6366F1',
-    problem: 'Indonesian basketball players had limited access to quality gear, and no strong local brand was serving them through social commerce channels. The demand was real. The supply was not.',
-    approach: 'Started at 16 with no capital and no playbook. Built a basketball e-commerce brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing independently.',
+    problem: 'Indonesian basketball players had limited access to quality gear, and no strong local brand was serving them through social commerce channels.',
+    approach: 'Started with nothing: no capital, no playbook, no mentors. Built a brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing end to end.',
     output: [
-      'Scaled from zero to $6,500 per month in revenue, starting at age 16',
-      'Built and ran all operations end to end — independently',
+      'Scaled from zero to $6,500 per month in revenue, starting at 16',
+      'Built and ran every part of the operation independently',
       'Ran data-driven marketing campaigns before knowing what to call them'
     ]
   },
@@ -120,9 +120,9 @@ const projects = {
     title: 'BMCC Marketing Club',
     accent: '#0052CC',
     problem: 'BMCC students interested in marketing had no dedicated community, no industry exposure, and no real-world space to develop beyond what a classroom could offer.',
-    approach: 'Founded the BMCC Marketing Club from scratch. Built the structure, organized industry speaker events, created mentorship frameworks, and built a genuine learning environment — while finishing his own degree.',
+    approach: 'Founded the club from scratch. Built the organizational structure, organized an industry speaker series, created mentorship frameworks, and built a real learning environment while finishing my own degree.',
     output: [
-      'Built an active student organization from zero with no existing infrastructure',
+      'Built an active student organization from nothing',
       'Connected students to marketing professionals through an organized speaker series',
       'Established a lasting community and learning environment at CUNY BMCC'
     ]
