@@ -181,8 +181,9 @@ document.querySelectorAll('.proj-card').forEach(card => {
     expand.classList.add('open');
 
     setTimeout(() => {
-      expand.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 100);
+      const top = expand.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 120);
   });
 });
 
