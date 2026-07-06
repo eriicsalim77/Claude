@@ -84,6 +84,10 @@ const projects = {
     org: 'Inside Leaf Home · 2024–2026',
     title: 'GeoLink',
     accent: '#16A34A',
+    preview: 'https://docs.google.com/presentation/d/1uvB2J5J2wXGzVsE7wP29-a-98h6GPGzH/embed?start=false&loop=false&rm=minimal',
+    links: [
+      { label: 'View Presentation →', url: 'https://docs.google.com/presentation/d/1uvB2J5J2wXGzVsE7wP29-a-98h6GPGzH/edit?usp=sharing' }
+    ],
     problem: 'Paid media spend lived on platforms: Meta, TikTok, Nextdoor. CRM revenue lived in a separate system. Nobody could connect the two. Which regions were generating returns? Which weren\'t? Where should next month\'s budget go? Nobody had a reliable answer.',
     approach: 'I built GeoLink from scratch: a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography.',
     output: [
@@ -109,6 +113,10 @@ const projects = {
     org: 'Jakarta, Indonesia · 2019–2022',
     title: 'BBALLSTORE.ID',
     accent: '#6366F1',
+    links: [
+      { label: 'Instagram · 9K followers', url: 'https://www.instagram.com/bballstore.id/' },
+      { label: 'Shop on Tokopedia', url: 'https://www.tokopedia.com/bballstore' }
+    ],
     problem: 'Indonesian basketball players had limited access to quality gear, and no strong local brand was serving them through social commerce channels.',
     approach: 'Started from scratch. Built a brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing end to end.',
     output: [
@@ -154,6 +162,8 @@ const expandApp       = document.getElementById('expandApproach');
 const expandOut       = document.getElementById('expandOutput');
 const expandPhotoRow  = document.getElementById('expandPhotoRow');
 const expandPDFRow    = document.getElementById('expandPDFRow');
+const expandPreview   = document.getElementById('expandPreview');
+const expandLinksRow  = document.getElementById('expandLinksRow');
 
 let activeCard = null;
 
@@ -183,6 +193,10 @@ document.querySelectorAll('.proj-card').forEach(card => {
     expandApp.textContent   = data.approach;
     expandOut.innerHTML     = data.output.map(o => `<li>${o}</li>`).join('');
 
+    expandPreview.innerHTML = data.preview
+      ? `<iframe src="${data.preview}" allowfullscreen loading="lazy"></iframe>`
+      : '';
+
     if (data.photos) {
       expandPhotoRow.innerHTML = data.photos.map(src =>
         `<img src="${src}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`
@@ -193,11 +207,13 @@ document.querySelectorAll('.proj-card').forEach(card => {
       expandPhotoRow.innerHTML = '';
     }
 
-    if (data.pdf) {
-      expandPDFRow.innerHTML = `<a href="${data.pdf}" target="_blank" rel="noopener noreferrer" class="btn-pdf">View PDF →</a>`;
-    } else {
-      expandPDFRow.innerHTML = '';
-    }
+    expandLinksRow.innerHTML = data.links
+      ? data.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" class="btn-link">${l.label}</a>`).join('')
+      : '';
+
+    expandPDFRow.innerHTML = data.pdf
+      ? `<a href="${data.pdf}" target="_blank" rel="noopener noreferrer" class="btn-pdf">View PDF →</a>`
+      : '';
 
     expand.classList.add('open');
 
