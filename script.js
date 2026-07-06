@@ -71,6 +71,7 @@ const projects = {
     org: 'Inside Fox Corporation · OutKick · 2026',
     title: 'OutKick Loyalty Portal Initiative',
     accent: '#E8272A',
+    pdf: 'ProjectPigeon_EricMarlie.pdf',
     problem: 'OutKick was good at acquiring sports fans. Keeping the ones who actually cared was the harder problem. The super user, the fan who visits daily, engages deeply, and drives community, was declining. Nobody had a clear picture of where the drop-off was happening, or a business case that leadership could act on.',
     approach: 'I partnered across BI, editorial, product, and CRM to analyze behavioral patterns, identify who the super users actually were, and map where the experience was breaking down. I built a data-backed retention playbook for each team, then prototyped an AI-assisted loyalty portal concept using Replit and Claude Code and demoed it live in the final presentation.',
     output: [
@@ -116,6 +117,19 @@ const projects = {
       'Ran data-driven marketing campaigns before knowing what to call them'
     ]
   },
+  creative: {
+    org: 'Inside Leaf Home · 2025',
+    title: 'Annual Creative Performance Report',
+    accent: '#16A34A',
+    problem: 'With more than 400 unique Meta creatives and $7M in annual media spend for Leaf Home Water Solutions, evaluating creative performance at scale was challenging. Asset naming was inconsistent, performance data was fragmented across Tableau, Excel, and advertising platforms, and there was no standardized framework to identify which creative themes, formats, messaging, and creators consistently drove business results or should guide 2026 creative strategy.',
+    approach: 'I authored Leaf Home Water Solutions\' annual creative performance report by querying campaign performance data with SQL, extracting and validating data from Tableau, and building an Excel-based workflow to clean, standardize, and categorize more than 400 creatives across 150+ naming variations. Working closely with the Media, Analytics, and Creative teams, I synthesized performance trends into clear, data-backed recommendations for 2026 creative planning.',
+    output: [
+      'Authored a cross-functional strategic report evaluating 400+ creatives representing $7M in Meta advertising spend',
+      'Established a standardized creative taxonomy for analyzing performance across formats, messaging, concepts, creators, and campaign types',
+      'Delivered data-backed recommendations that informed 2026 creative planning across Media, Creative, and Product teams',
+      'Consolidated thousands of performance records into an executive-ready report that enabled faster cross-functional decision-making'
+    ]
+  },
   bmcc: {
     org: 'CUNY BMCC · 2024',
     title: 'BMCC Marketing Club',
@@ -139,6 +153,7 @@ const expandProb      = document.getElementById('expandProblem');
 const expandApp       = document.getElementById('expandApproach');
 const expandOut       = document.getElementById('expandOutput');
 const expandPhotoRow  = document.getElementById('expandPhotoRow');
+const expandPDFRow    = document.getElementById('expandPDFRow');
 
 let activeCard = null;
 
@@ -176,6 +191,12 @@ document.querySelectorAll('.proj-card').forEach(card => {
       expandPhotoRow.innerHTML = `<img src="${data.photo}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`;
     } else {
       expandPhotoRow.innerHTML = '';
+    }
+
+    if (data.pdf) {
+      expandPDFRow.innerHTML = `<a href="${data.pdf}" target="_blank" rel="noopener noreferrer" class="btn-pdf">View PDF →</a>`;
+    } else {
+      expandPDFRow.innerHTML = '';
     }
 
     expand.classList.add('open');

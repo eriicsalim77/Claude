@@ -3,16 +3,16 @@
    ════════════════════════════════════════ */
 :root {
   --white:      #ffffff;
-  --off-white:  #F7F6F3;
-  --light:      #F0EFEC;
-  --dark:       #0C0C0F;
-  --dark-2:     #16161A;
-  --dark-3:     #1E1E24;
+  --off-white:  #ffffff;
+  --light:      #F4F6FA;
+  --dark:       #0B1F3F;
+  --dark-2:     #0F2B52;
+  --dark-3:     #163C6E;
   --text:       #111118;
   --text-2:     #5A5A72;
   --text-3:     #9999AA;
-  --accent:     #0052CC;
-  --accent-2:   #003D99;
+  --accent:     #1E40AF;
+  --accent-2:   #1E3A8A;
   --fox-red:    #E8272A;
   --leaf-green: #16A34A;
   --green-lt:   #22C55E;
@@ -273,10 +273,7 @@ strong { font-weight: 600; }
 }
 .hero-h1 em { font-style: italic; color: rgba(255,255,255,0.5); }
 .grad-text {
-  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 50%, #818CF8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
 }
 .hero-body {
   max-width: 500px;
@@ -527,6 +524,22 @@ strong { font-weight: 600; }
   margin-bottom: 32px;
 }
 .expand-photo-row:empty { margin-bottom: 0; }
+.expand-pdf-row { margin-bottom: 24px; }
+.expand-pdf-row:empty { margin-bottom: 0; }
+.btn-pdf {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600;
+  color: var(--expand-accent, var(--accent));
+  border: 1.5px solid var(--expand-accent, var(--accent));
+  border-radius: 100px;
+  padding: 10px 20px;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.btn-pdf:hover {
+  background: var(--expand-accent, var(--accent));
+  color: #fff;
+}
 .exp-photo {
   flex: 1;
   min-width: 0;
