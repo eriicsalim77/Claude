@@ -182,39 +182,12 @@ const expandSocialCards   = document.getElementById('expandSocialCards');
 let activeCard = null;
 
 function renderSocialCard(c) {
-  if (c.type === 'instagram') {
-    const igColors = ['#E1306C','#F56040','#FCAF45','#833AB4','#E1306C','#C13584'];
-    const cells = igColors.map(col => `<div class="sc-ig-cell" style="background:${col}"></div>`).join('');
-    return `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="social-card sc-instagram">
-      <div class="sc-header">
-        <div class="sc-icon sc-icon-ig"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg></div>
-        <div><div class="sc-handle">${c.handle}</div><div class="sc-stat">${c.stat}</div></div>
-      </div>
-      <div class="sc-ig-grid">${cells}</div>
-      <div class="sc-cta-bar"><span>View Profile</span><span>→</span></div>
-    </a>`;
-  }
-  if (c.type === 'tokopedia') {
-    const products = [
-      { label: 'Nike KD', bg: '#E0E7FF' },
-      { label: 'Air Jordan', bg: '#FEF9C3' },
-      { label: 'Kobe', bg: '#FCE7F3' },
-      { label: 'Lebron', bg: '#DCFCE7' }
-    ];
-    const thumbs = products.map(p =>
-      `<div><div class="sc-product-thumb" style="background:${p.bg}"></div><div class="sc-product-label">${p.label}</div></div>`
-    ).join('');
-    return `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="social-card sc-tokopedia">
-      <div class="sc-header">
-        <div class="sc-icon sc-icon-toko"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
-        <div><div class="sc-handle">${c.handle}</div><div class="sc-stat">${c.stat}</div></div>
-      </div>
-      <div class="sc-badges"><span class="sc-badge">Official Store</span><span class="sc-badge">⭐ 4.9</span></div>
-      <div class="sc-products">${thumbs}</div>
-      <div class="sc-cta-bar"><span>Visit Store</span><span>→</span></div>
-    </a>`;
-  }
-  return '';
+  const imgSrc = c.type === 'instagram' ? 'bball_ss.png' : 'screenshoiot_tokopedoia.png';
+  const label  = c.type === 'instagram' ? 'View on Instagram →' : 'View on Tokopedia →';
+  return `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="social-card sc-screenshot">
+    <img src="${imgSrc}" alt="${c.platform} preview" loading="lazy">
+    <div class="sc-cta-bar"><span>${c.handle}</span><span>${label}</span></div>
+  </a>`;
 }
 
 function setExpandAccent(color) {
