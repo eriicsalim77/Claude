@@ -69,7 +69,7 @@ if (photoWrap) {
 const projects = {
   pigeon: {
     org: 'Inside Fox Corporation · OutKick · 2026',
-    title: 'OutKick Loyalty Portal Initiative',
+    title: 'OutKick Loyalty Portal',
     accent: '#E8272A',
     preview: 'ProjectPigeon_EricMarlie.pdf',
     pdf: 'ProjectPigeon_EricMarlie.pdf',
@@ -138,7 +138,7 @@ const projects = {
   },
   creative: {
     org: 'Inside Leaf Home · 2025',
-    title: 'Annual Creative Performance Report',
+    title: 'Leaf Home Creative Report',
     accent: '#16A34A',
     preview: 'LHWS_2025_CreativeReport_Social.pdf',
     pdf: 'LHWS_2025_CreativeReport_Social.pdf',
