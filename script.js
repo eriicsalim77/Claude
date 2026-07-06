@@ -101,6 +101,9 @@ const projects = {
     title: 'Clean N Kick',
     accent: '#F97316',
     photo: 'IMG_9068.jpeg',
+    links: [
+      { label: 'View Pitch Deck →', url: 'CLEAN N KICK FINAL DECK.pptx' }
+    ],
     problem: 'New Yorkers are serious about their sneakers. Finding reliable, convenient shoe cleaning in the city is surprisingly hard. Nobody had built the on-demand version of it yet.',
     approach: 'Designed the full business from scratch: service model, pricing strategy, unit economics, customer discovery, competitive analysis, and pitch deck. Built and delivered it independently, under competition pressure.',
     output: [
@@ -129,6 +132,7 @@ const projects = {
     org: 'Inside Leaf Home · 2025',
     title: 'Annual Creative Performance Report',
     accent: '#16A34A',
+    pdf: 'LHWS_2025_CreativeReport_Social.pdf',
     problem: 'With more than 400 unique Meta creatives and $7M in annual media spend for Leaf Home Water Solutions, evaluating creative performance at scale was challenging. Asset naming was inconsistent, performance data was fragmented across Tableau, Excel, and advertising platforms, and there was no standardized framework to identify which creative themes, formats, messaging, and creators consistently drove business results or should guide 2026 creative strategy.',
     approach: 'I authored Leaf Home Water Solutions\' annual creative performance report by querying campaign performance data with SQL, extracting and validating data from Tableau, and building an Excel-based workflow to clean, standardize, and categorize more than 400 creatives across 150+ naming variations. Working closely with the Media, Analytics, and Creative teams, I synthesized performance trends into clear, data-backed recommendations for 2026 creative planning.',
     output: [
