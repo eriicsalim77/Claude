@@ -71,6 +71,7 @@ const projects = {
     org: 'Inside Fox Corporation · OutKick · 2026',
     title: 'OutKick Loyalty Portal Initiative',
     accent: '#E8272A',
+    preview: 'ProjectPigeon_EricMarlie.pdf',
     pdf: 'ProjectPigeon_EricMarlie.pdf',
     problem: 'OutKick was good at acquiring sports fans. Keeping the ones who actually cared was the harder problem. The super user, the fan who visits daily, engages deeply, and drives community, was declining. Nobody had a clear picture of where the drop-off was happening, or a business case that leadership could act on.',
     approach: 'I partnered across BI, editorial, product, and CRM to analyze behavioral patterns, identify who the super users actually were, and map where the experience was breaking down. I built a data-backed retention playbook for each team, then prototyped an AI-assisted loyalty portal concept using Replit and Claude Code and demoed it live in the final presentation.',
@@ -100,9 +101,12 @@ const projects = {
     org: 'CUNY Baruch · Blackstone LaunchPad · 2023',
     title: 'Clean N Kick',
     accent: '#F97316',
-    photo: 'IMG_9068.jpeg',
+    splitPreview: {
+      photo: 'IMG_9068.jpeg',
+      iframe: 'https://view.officeapps.live.com/op/embed.aspx?src=https://raw.githubusercontent.com/eriicsalim77/Portofolio/claude/eric-portfolio-updates-VF0hP/CLEAN%20N%20KICK%20FINAL%20DECK.pptx'
+    },
     links: [
-      { label: 'View Pitch Deck →', url: 'CLEAN N KICK FINAL DECK.pptx' }
+      { label: 'Download Deck →', url: 'CLEAN N KICK FINAL DECK.pptx' }
     ],
     problem: 'New Yorkers are serious about their sneakers. Finding reliable, convenient shoe cleaning in the city is surprisingly hard. Nobody had built the on-demand version of it yet.',
     approach: 'Designed the full business from scratch: service model, pricing strategy, unit economics, customer discovery, competitive analysis, and pitch deck. Built and delivered it independently, under competition pressure.',
@@ -116,6 +120,10 @@ const projects = {
     org: 'Jakarta, Indonesia · 2019–2022',
     title: 'BBALLSTORE.ID',
     accent: '#6366F1',
+    socialCards: [
+      { platform: 'Instagram', handle: '@bballstore.id', stat: '9K followers', url: 'https://www.instagram.com/bballstore.id/', color: '#E1306C' },
+      { platform: 'Tokopedia', handle: 'bballstore', stat: 'Official store', url: 'https://www.tokopedia.com/bballstore', color: '#42B549' }
+    ],
     links: [
       { label: 'Instagram · 9K followers', url: 'https://www.instagram.com/bballstore.id/' },
       { label: 'Shop on Tokopedia', url: 'https://www.tokopedia.com/bballstore' }
@@ -132,6 +140,7 @@ const projects = {
     org: 'Inside Leaf Home · 2025',
     title: 'Annual Creative Performance Report',
     accent: '#16A34A',
+    preview: 'LHWS_2025_CreativeReport_Social.pdf',
     pdf: 'LHWS_2025_CreativeReport_Social.pdf',
     problem: 'With more than 400 unique Meta creatives and $7M in annual media spend for Leaf Home Water Solutions, evaluating creative performance at scale was challenging. Asset naming was inconsistent, performance data was fragmented across Tableau, Excel, and advertising platforms, and there was no standardized framework to identify which creative themes, formats, messaging, and creators consistently drove business results or should guide 2026 creative strategy.',
     approach: 'I authored Leaf Home Water Solutions\' annual creative performance report by querying campaign performance data with SQL, extracting and validating data from Tableau, and building an Excel-based workflow to clean, standardize, and categorize more than 400 creatives across 150+ naming variations. Working closely with the Media, Analytics, and Creative teams, I synthesized performance trends into clear, data-backed recommendations for 2026 creative planning.',
@@ -147,6 +156,9 @@ const projects = {
     title: 'BMCC Marketing Club',
     accent: '#0052CC',
     photos: ['IMG_0771.jpeg', 'IMG_9080.jpeg'],
+    links: [
+      { label: 'Instagram · @mcbmcc', url: 'https://www.instagram.com/mcbmcc/' }
+    ],
     problem: 'BMCC students interested in marketing had no dedicated community, no industry exposure, and no real-world space to develop beyond what a classroom could offer.',
     approach: 'Founded the club from scratch. Built the organizational structure, organized an industry speaker series, created mentorship frameworks, and built a real learning environment while finishing my own degree.',
     output: [
@@ -164,10 +176,12 @@ const expandTitle     = document.getElementById('expandTitle');
 const expandProb      = document.getElementById('expandProblem');
 const expandApp       = document.getElementById('expandApproach');
 const expandOut       = document.getElementById('expandOutput');
-const expandPhotoRow  = document.getElementById('expandPhotoRow');
-const expandPDFRow    = document.getElementById('expandPDFRow');
-const expandPreview   = document.getElementById('expandPreview');
-const expandLinksRow  = document.getElementById('expandLinksRow');
+const expandPhotoRow      = document.getElementById('expandPhotoRow');
+const expandPDFRow        = document.getElementById('expandPDFRow');
+const expandPreview       = document.getElementById('expandPreview');
+const expandLinksRow      = document.getElementById('expandLinksRow');
+const expandSplitPreview  = document.getElementById('expandSplitPreview');
+const expandSocialCards   = document.getElementById('expandSocialCards');
 
 let activeCard = null;
 
@@ -197,15 +211,39 @@ document.querySelectorAll('.proj-card').forEach(card => {
     expandApp.textContent   = data.approach;
     expandOut.innerHTML     = data.output.map(o => `<li>${o}</li>`).join('');
 
-    expandPreview.innerHTML = data.preview
-      ? `<iframe src="${data.preview}" allowfullscreen loading="lazy"></iframe>`
-      : '';
+    if (data.preview) {
+      const isSlides = data.preview.includes('google.com/presentation');
+      expandPreview.innerHTML = `<iframe src="${data.preview}" class="${isSlides ? 'preview-slides' : 'preview-pdf'}" allowfullscreen loading="lazy"></iframe>`;
+    } else {
+      expandPreview.innerHTML = '';
+    }
+
+    if (data.splitPreview) {
+      expandSplitPreview.innerHTML =
+        `<img src="${data.splitPreview.photo}" loading="lazy" onerror="this.style.display='none'">` +
+        `<iframe src="${data.splitPreview.iframe}" loading="lazy" allowfullscreen></iframe>`;
+    } else {
+      expandSplitPreview.innerHTML = '';
+    }
+
+    if (data.socialCards) {
+      expandSocialCards.innerHTML = data.socialCards.map(c =>
+        `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="social-card" style="--sc-color:${c.color}">
+          <div class="sc-platform">${c.platform}</div>
+          <div class="sc-handle">${c.handle}</div>
+          ${c.stat ? `<div class="sc-stat">${c.stat}</div>` : ''}
+          <div class="sc-arrow">View →</div>
+        </a>`
+      ).join('');
+    } else {
+      expandSocialCards.innerHTML = '';
+    }
 
     if (data.photos) {
       expandPhotoRow.innerHTML = data.photos.map(src =>
         `<img src="${src}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`
       ).join('');
-    } else if (data.photo) {
+    } else if (data.photo && !data.splitPreview) {
       expandPhotoRow.innerHTML = `<img src="${data.photo}" class="exp-photo" loading="lazy" onerror="this.parentElement.removeChild(this)">`;
     } else {
       expandPhotoRow.innerHTML = '';
