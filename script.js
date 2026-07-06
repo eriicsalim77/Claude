@@ -73,7 +73,7 @@ const projects = {
     accent: '#E8272A',
     preview: 'ProjectPigeon_EricMarlie.pdf',
     pdf: 'ProjectPigeon_EricMarlie.pdf',
-    problem: 'OutKick was good at acquiring sports fans. Keeping the ones who actually cared was the harder problem. The super user, the fan who visits daily, engages deeply, and drives community, was declining. Nobody had a clear picture of where the drop-off was happening, or a business case that leadership could act on.',
+    problem: 'OutKick attracted millions of sports fans, but engagement among its most loyal readers was declining.',
     approach: 'I partnered across BI, editorial, product, and CRM to analyze behavioral patterns, identify who the super users actually were, and map where the experience was breaking down. I built a data-backed retention playbook for each team, then prototyped an AI-assisted loyalty portal concept using Replit and Claude Code and demoed it live in the final presentation.',
     output: [
       'Retention playbook presented to 15+ stakeholders, including two SVPs, in a full boardroom setting',
@@ -89,7 +89,7 @@ const projects = {
     links: [
       { label: 'View Presentation →', url: 'https://docs.google.com/presentation/d/1uvB2J5J2wXGzVsE7wP29-a-98h6GPGzH/edit?usp=sharing' }
     ],
-    problem: 'Paid media spend lived on platforms: Meta, TikTok, Nextdoor. CRM revenue lived in a separate system. Nobody could connect the two. Which regions were generating returns? Which weren\'t? Where should next month\'s budget go? Nobody had a reliable answer.',
+    problem: 'Paid media data and CRM revenue existed in separate systems, making regional ROAS impossible to measure.',
     approach: 'I built GeoLink from scratch: a proprietary ZIP/DMA attribution system that joined platform spend data to CRM revenue outcomes by geography.',
     output: [
       'ROAS improved 37% year over year through geo-level budget reallocation that was previously impossible to justify',
@@ -108,7 +108,7 @@ const projects = {
     links: [
       { label: 'Download Deck →', url: 'CLEAN N KICK FINAL DECK.pptx' }
     ],
-    problem: 'New Yorkers are serious about their sneakers. Finding reliable, convenient shoe cleaning in the city is surprisingly hard. Nobody had built the on-demand version of it yet.',
+    problem: 'Finding reliable, on-demand, and affordable sneaker cleaning in New York City was surprisingly difficult.',
     approach: 'Designed the full business from scratch: service model, pricing strategy, unit economics, customer discovery, competitive analysis, and pitch deck. Built and delivered it independently, under competition pressure.',
     output: [
       'Won $1,000 first place at CUNY Blackstone LaunchPad',
@@ -124,7 +124,7 @@ const projects = {
       { type: 'instagram', platform: 'Instagram', handle: '@bballstore.id', stat: '9K followers', url: 'https://www.instagram.com/bballstore.id/' },
       { type: 'tokopedia', platform: 'Tokopedia', handle: 'bballstore', stat: 'Official Store', url: 'https://www.tokopedia.com/bballstore' }
     ],
-    problem: 'Indonesian basketball players had limited access to quality gear, and no strong local brand was serving them through social commerce channels.',
+    problem: 'Affordable performance basketball brands like Anta and Li-Ning were difficult to find in Indonesia.',
     approach: 'Started from scratch. Built a brand using influencer partnerships and marketplace optimization across Tokopedia and Shopee. Managed sourcing, inventory, fulfillment, and marketing end to end.',
     output: [
       'Scaled from zero to $6,500 per month in revenue, starting at 16',
@@ -138,7 +138,7 @@ const projects = {
     accent: '#16A34A',
     preview: 'LHWS_2025_CreativeReport_Social.pdf',
     pdf: 'LHWS_2025_CreativeReport_Social.pdf',
-    problem: 'With more than 400 unique Meta creatives and $7M in annual media spend for Leaf Home Water Solutions, evaluating creative performance at scale was challenging. Asset naming was inconsistent, performance data was fragmented across Tableau, Excel, and advertising platforms, and there was no standardized framework to identify which creative themes, formats, messaging, and creators consistently drove business results or should guide 2026 creative strategy.',
+    problem: 'Leaf Home Water Solutions managed 400+ Meta creatives and $7M in annual media spend, but lacked a standardized framework to evaluate creative performance at scale.',
     approach: 'I authored Leaf Home Water Solutions\' annual creative performance report by querying campaign performance data with SQL, extracting and validating data from Tableau, and building an Excel-based workflow to clean, standardize, and categorize more than 400 creatives across 150+ naming variations. Working closely with the Media, Analytics, and Creative teams, I synthesized performance trends into clear, data-backed recommendations for 2026 creative planning.',
     output: [
       'Authored a cross-functional strategic report evaluating 400+ creatives representing $7M in Meta advertising spend',
@@ -155,7 +155,7 @@ const projects = {
     links: [
       { label: 'Instagram · @mcbmcc', url: 'https://www.instagram.com/mcbmcc/' }
     ],
-    problem: 'BMCC students interested in marketing had no dedicated community, no industry exposure, and no real-world space to develop beyond what a classroom could offer.',
+    problem: 'BMCC students interested in marketing had limited opportunities to build industry connections and gain real-world experience outside the classroom.',
     approach: 'Founded the club from scratch. Built the organizational structure, organized an industry speaker series, created mentorship frameworks, and built a real learning environment while finishing my own degree.',
     output: [
       'Built an active student organization from nothing',
